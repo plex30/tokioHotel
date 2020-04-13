@@ -18,15 +18,15 @@
         <li><a href="">Reservas</a></li>
         <li><a href="">Contacto</a></li>
         @guest
+                            
+                            @if (Route::has('register'))
                             <li><a href="{{ route('login') }}">{{ __('Iniciar Sesión') }}</a>
                             </li>
-                            @if (Route::has('register'))
-                                <li><a href="{{ route('register') }}">{{ __('Registrar') }}</a></li>
                             @endif
                         @else
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    Bienvenido {{ Auth::user()->name }} <span class="caret"></span>
+                                    Bienvenido {{ Auth::user()->firstname }} <span class="caret"></span>
                                 </a>
 
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -53,20 +53,19 @@
 <div id="resize">
     <div id="close-btn"><img src="{{asset('./img/home/iconClose.png')}}" width="30" height="30"></div>
         <ul id="menu">
-            <li><a href="">Inicio</a></li>
             <li><a href="{{route('experience.index')}}">Experiencias</a></li>
             <li><a href="">Reservas</a></li>
             <li><a href="">Contacto</a></li>
             @guest
+                            
+                            @if (Route::has('register'))
                             <li><a href="{{ route('login') }}">{{ __('Iniciar Sesión') }}</a>
                             </li>
-                            @if (Route::has('register'))
-                                <li><a href="{{ route('register') }}">{{ __('Registrar') }}</a></li>
                             @endif
                         @else
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    Bienvenido {{ Auth::user()->name }} <span class="caret"></span>
+                                    Bienvenido {{ Auth::user()->firstname }} <span class="caret"></span>
                                 </a>
 
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -176,7 +175,7 @@
                 <div class="collab">
                     <div class="row">
                         <div class="col-lg-12">
-                            <p class="wow fadeInUp">Got an interest</p>
+                            <p class="wow fadeInUp">Información de interés</p>
                         </div>
                     </div>
                 </div>
@@ -191,8 +190,10 @@
                     <div class="row">
 
                         <div class="col-lg-4" id="personal">
-                            <p class="wow fadeInUp">Conecta</p>
-                            <h4 class="wow fadeInUp" data-wow-delay="0.2s">ig tokio</h4>
+                            <p class="wow fadeInUp">Encuentranos</p>
+                            <h4 class="wow fadeInUp" data-wow-delay="0.2s">TOKIO Hotel</h4>
+                            <h4 class="wow fadeInUp" data-wow-delay="0.2s">C/ Real 404</h4>
+                            <h4 class="wow fadeInUp" data-wow-delay="0.2s">Madrid</h4>
                             <br><br>
                         </div>
 
@@ -207,7 +208,7 @@
                         </div>
 
                         <div class="col-lg-4" id="address">
-                            <p class="wow fadeInUp">Say hello</p>
+                            <p class="wow fadeInUp">Contacta</p>
                             <h4 class="wow fadeInUp" data-wow-delay="0.2s">tokio@gmail.com</h4>
                             <br><br>
                         </div>

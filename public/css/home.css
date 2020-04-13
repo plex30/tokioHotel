@@ -247,11 +247,11 @@ h6{
 .carousel-item{
     border-radius: 10px;
 }
-.backpic{
+/* .backpic{
     background: url(../img/home/panel.png) no-repeat;
     background-position: center;
     background-size: cover;
-}
+} */
 .project{
     height: 500px;
 }
