@@ -1,11 +1,19 @@
 window.onload = function () {
  
   document.getElementById('toggle').addEventListener('click', changeMenu)
+  document.getElementById('close-btn').addEventListener('click', changeMenu)
+  
   const link = document.getElementById('resize').querySelectorAll('a')
   link.forEach(function (e) {
     e.addEventListener('click', changeMenu)
   })
-  document.getElementById('close-btn').addEventListener('click', changeMenu)
+
+  function changeMenu () {
+    this.classList.toggle('on');
+    document.getElementById('resize').classList.toggle('active')
+  }
+
+  
 
   TweenMax.from('#brand', 1, {
     delay: 0.8,
@@ -25,10 +33,7 @@ window.onload = function () {
     0.1
   )
 
-  function changeMenu () {
-    this.classList.toggle('on');
-    document.getElementById('resize').classList.toggle('active')
-  }
+
 
   const parrallax = document.querySelector('.hero')
 
