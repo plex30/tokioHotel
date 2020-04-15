@@ -44,11 +44,11 @@
             @endguest
         
     </ul>
-
+</nav>
     <div id="toggle">
         <div class="span"><img src="{{asset('./img/home/iconMenu.png')}}" width="30" height="30"></div>
     </div>
-</nav>
+
 
 <div id="resize">
     <div id="close-btn"><img src="{{asset('./img/home/iconClose.png')}}" width="30" height="30"></div>

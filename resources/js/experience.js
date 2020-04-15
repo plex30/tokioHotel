@@ -1,6 +1,6 @@
 window.onload = function () {
 
-    /* document.getElementById('toggle').addEventListener('click', changeMenu)
+    document.getElementById('toggle').addEventListener('click', changeMenu)
     document.getElementById('close-btn').addEventListener('click', changeMenu)
     
     const link = document.getElementById('resize').querySelectorAll('a')
@@ -11,7 +11,7 @@ window.onload = function () {
     function changeMenu () {
       this.classList.toggle('on');
       document.getElementById('resize').classList.toggle('active')
-    } */
+    }
 
     var $activeSlide = $('.active'),
       $homeSlide = $(".slide"),

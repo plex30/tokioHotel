@@ -4,8 +4,12 @@
    Tokio Hotel 
 @endsection
 @section('content')
-  {{--   <div id="toggle">
-        <div class="span"><img src="{{asset('./img/home/iconMenu.png')}}" width="30" height="30"></div>
+
+<div class="wrapper">
+<div class="nav">
+    <div id="toggle">
+        <a href="{{url('/')}}" id="logo"><img src="{{asset('./img/home/lg.png')}}" width="80" height="80"></a>
+        <img src="{{asset('./img/home/iconMenu.png')}}" width="30" height="30">
     </div>
 
 <div id="resize">
@@ -40,8 +44,8 @@
                             </li>
             @endguest
         </ul>
-</div> --}}
-
+</div>
+</div>
 <div class="slide active">
     <div class="card">
           <div class="card-img" id="img01"></div>
@@ -49,7 +53,6 @@
                 <p class="card-theme">Travel</p>
                 <h2 class="card-header">Amongst the giants</h2>
                 <p class="card-para">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti repellendus vel neque iure aut, eligendi aliquid vero facilis, quia repellat.</p>
-          <a class="card-link">Read</a>
           </div>
     </div>
 </div>
@@ -60,7 +63,6 @@
                 <p class="card-theme">Travel</p>
                 <h2 class="card-header">Home Outdoors</h2>
                 <p class="card-para">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti repellendus vel neque iure aut, eligendi aliquid vero facilis, quia repellat.</p>
-          <a class="card-link">Read</a>
           </div>
     </div>
 </div>
@@ -71,7 +73,6 @@
                 <p class="card-theme">Travel</p>
                 <h2 class="card-header">A Mystic Walk</h2>
                 <p class="card-para">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti repellendus vel neque iure aut, eligendi aliquid vero facilis, quia repellat.</p>
-          <a class="card-link">Read</a>
           </div>
     </div>
 </div>
@@ -82,7 +83,6 @@
                 <p class="card-theme">Travel</p>
                 <h2 class="card-header">A Mystic Walk</h2>
                 <p class="card-para">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti repellendus vel neque iure aut, eligendi aliquid vero facilis, quia repellat.</p>
-          <a class="card-link">Read</a>
           </div>
     </div>
 </div>
@@ -93,7 +93,6 @@
                 <p class="card-theme">Travel</p>
                 <h2 class="card-header">A Mystic Walk</h2>
                 <p class="card-para">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti repellendus vel neque iure aut, eligendi aliquid vero facilis, quia repellat.</p>
-          <a class="card-link">Read</a>
           </div>
     </div>
 </div>
@@ -101,5 +100,7 @@
 <div class="prevnext">
     <button class="pn-btn" id="prev"></button>
     <button class="pn-btn" id="next"></button>
+</div>
+
 </div>
 @endsection
