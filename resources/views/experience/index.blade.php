@@ -15,7 +15,7 @@
 <div id="resize">
     <div id="close-btn"><img src="{{asset('./img/home/iconClose.png')}}" width="30" height="30"></div>
         <ul id="menu">
-            <li><a href="{{route('experience.index')}}">Experiencias</a></li>
+            <li><a href="{{url('/')}}">Inicio</a></li>
             <li><a href="">Reservas</a></li>
             <li><a href="">Contacto</a></li>
             @guest
@@ -46,7 +46,7 @@
         </ul>
 </div>
 </div>
-<div class="slide active">
+<div class="slide active" id="sli">
     <div class="card">
           <div class="card-img" id="img01"></div>
           <div class="card-content">
@@ -56,7 +56,7 @@
           </div>
     </div>
 </div>
-<div class="slide">
+<div class="slide" id="sli">
     <div class="card">
           <div class="card-img" id="img02"></div>
           <div class="card-content">
@@ -66,7 +66,7 @@
           </div>
     </div>
 </div>
-<div class="slide">
+<div class="slide" id="sli" >
     <div class="card">
           <div class="card-img" id="img03"></div>
           <div class="card-content">
@@ -76,7 +76,7 @@
           </div>
     </div>
 </div>
-<div class="slide">
+<div class="slide" id="sli">
     <div class="card">
           <div class="card-img" id="img04"></div>
           <div class="card-content">
@@ -86,7 +86,7 @@
           </div>
     </div>
 </div>
-<div class="slide">
+<div class="slide" id="sli">
     <div class="card">
           <div class="card-img" id="img05"></div>
           <div class="card-content">
@@ -98,8 +98,11 @@
 </div>
 
 <div class="prevnext">
-    <button class="pn-btn" id="prev"></button>
-    <button class="pn-btn" id="next"></button>
+    <a href="" class="active"></a>
+    <a href=""></a>
+    <a href=""></a>
+    <a href=""></a>
+    <a href=""></a>
 </div>
 
 </div>

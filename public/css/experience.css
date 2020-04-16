@@ -209,54 +209,21 @@ nav #brand a:hover{
 
 .prevnext {
     position: absolute;
-    width: 4vmin;
-    height: 8vmin;
-    right: 2%;
-    bottom: 0;
-    top: 80%;
-    color:#000;
-    margin: auto 0;
-}
-
-.pn-btn {
-    color: #000;
     width: 100%;
-    height: 50%;
-    border: 0;
-    background-color: transparent;
-    font-size: 20px;
+    text-align: center;
+    bottom: 10px;
+    word-spacing: 10px;
 }
 
-#prev, #next {
-    position: relative;
-    cursor: pointer;
+.prevnext > a{
+    background: #888888;
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    border-radius: 50%;
 }
 
-#prev:focus, #next:focus {
-    outline: none;
+.prevnext > a.active{
+    background: #000;
 }
 
-#prev:hover:after, #next:hover:after {
-    opacity: 1;
-}
-
-#prev:after, #next:after {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    left: 0;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    margin: auto;
-    opacity: 0.6;
-    transition: opacity 0.3s ease;
-}
-
-#prev:after {
-    content: "↑"
-}
-
-#next:after {
-    content: "↓"
-}
