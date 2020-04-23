@@ -1,0 +1,34 @@
+html, body{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    background: url(../img/contact/contact.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: table;
+    font-family: Quicksand;
+}
+
+.header{
+    text-align: center;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.header h1{
+    color: #fff;
+    font-size: 46px;
+}
+
+.header p{
+   color: #fff;
+   font-size: 12px;
+}

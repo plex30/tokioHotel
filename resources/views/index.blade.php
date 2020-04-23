@@ -16,7 +16,7 @@
         <li><a href="">Inicio</a></li>
         <li><a href="{{route('experience.index')}}">Experiencias</a></li>
         <li><a href="">Reservas</a></li>
-        <li><a href="">Contacto</a></li>
+        <li><a href="{{route('contact.index')}}">Contacto</a></li>
         @guest
                             
                             @if (Route::has('register'))

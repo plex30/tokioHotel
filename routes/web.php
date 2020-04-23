@@ -18,6 +18,7 @@ Route::get('/', function () {
 });
 
 Route::get('experience', 'ExperienceController@index')->name('experience.index');
+Route::get('contact', 'ContactController@index')->name('contact.index');
 // Authentication Routes...
 Route::get('login', 'Auth\LoginController@showLoginForm')->name('login');
 Route::post('login', 'Auth\LoginController@login');
