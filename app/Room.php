@@ -10,7 +10,7 @@ class Room extends Model
         'tipo', 'capacidad', 'n_habitacion', 'pvp'
     ];
 
-    public function users(){
+    public function usrs(){
         return $this->belongsToMany('App\User')->withPivot('f_entrada', 'f_salida'); 
     }
 }

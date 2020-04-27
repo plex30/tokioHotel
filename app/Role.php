@@ -7,7 +7,7 @@ use Illuminate\Notifications\Notifiable;
 
 class Role extends Model
 {
-    public function usrs(){
+    public function users(){
         return $this->belongsToMany('App\User')->withTimestamps();
     }
 }

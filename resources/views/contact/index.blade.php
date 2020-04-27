@@ -18,7 +18,7 @@
     <div id="resize">
         <div id="close-btn"><img src="{{asset('./img/home/iconClose.png')}}" width="30" height="30"></div>
             <ul id="menu">
-                <li><a href="{{url('/')}}">Inicio</a></li>
+                <li><a href="{{url('/home')}}">Inicio</a></li>
                 <li><a href="{{route('experience.index')}}">Experiencias</a></li>
                 <li><a href="">Reservas</a></li>
                 @guest
