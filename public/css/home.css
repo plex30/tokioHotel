@@ -248,11 +248,7 @@ h6{
 .carousel-item{
     border-radius: 10px;
 }
-/* .backpic{
-    background: url(../img/home/panel.png) no-repeat;
-    background-position: center;
-    background-size: cover;
-} */
+
 .project{
     height: 500px;
 }
@@ -384,6 +380,7 @@ font-weight: lighter;
 #media ul{
     list-style: none;
     text-align: center;
+    margin-right: 38px;
 }
 
 #media ul li{
@@ -394,8 +391,12 @@ font-weight: lighter;
     .collab, #personal, #media, #address{
         text-align: center;
     }
+    #media ul{
+        margin:0;
+    }
     .info ul{
         margin: 8 0 0 -22px;
         padding: 0;
     }
 }
+

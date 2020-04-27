@@ -52,10 +52,10 @@ nav #brand a:hover{
 
  #close-btn{
      position: absolute;
-     right: 35px;
+     right: 30px;
      z-index: 2;
      cursor: pointer;
-     top: -2px;
+     top: 88px;
      line-height: 80px;
  }
  
@@ -84,7 +84,8 @@ nav #brand a:hover{
  #resize #menu li{
      display: block;
      text-align: center;
-     padding: 10px 0;
+     padding: 10px 0px;
+     margin-left: 50px;
      font-size: 50px;
      min-height: 50px;
      font-weight: bold;
@@ -109,11 +110,26 @@ nav #brand a:hover{
      visibility: visible;
      opacity: 1;
  }
+
+ #toggle.on {
+     visibility: hidden;
+     opacity: 0;
+ }
+
  
  @media(max-width: 768px){
      #toggle{
          margin-top: 6px;
          margin-right: 4px;
+     }
+     #close-btn{
+         top: 12px;
+         right: 35px;
+     }
+     #resize #menu li{
+         margin-left: -3px;
+         font-size: 20px;
+         font-weight: lighter;
      }
      #resize li span{
          font-weight: bolder;

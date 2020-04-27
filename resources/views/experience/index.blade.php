@@ -5,21 +5,21 @@
 @endsection
 @section('content')
 
-<div class="wrapper">
 <nav>
     <div class="brand wow fadeInDown" id="brand">
         <a href="{{url('/')}}"><img src="{{asset('./img/home/lg.png')}}" width="80" height="80"></a>
-    </div>
-    <div class="toggle wow fadeInUp" id="toggle">
-        <img src="{{asset('./img/home/iconMenu.png')}}" width="30" height="30">
-    </div>
-
+        </div>
+        <div id="toggle">
+            <div class="span"><img src="{{asset('./img/home/iconMenu.png')}}" width="30" height="30"></div>
+    
+</nav>
+    
 <div id="resize">
     <div id="close-btn"><img src="{{asset('./img/home/iconClose.png')}}" width="30" height="30"></div>
         <ul id="menu">
             <li><a href="{{url('/')}}">Inicio</a></li>
             <li><a href="">Reservas</a></li>
-            <li><a href="">Contacto</a></li>
+            <li><a href="{{route('contact.index')}}">Contacto</a></li>
             @guest
                             
                             @if (Route::has('register'))
@@ -47,7 +47,9 @@
             @endguest
         </ul>
 </div>
-</nav>
+  
+
+
 <div class="cont-slide">
 <div class="slide s1" id="sli">
     <div class="card">

@@ -3623,3 +3623,15 @@
     animation-iteration-count: 1 !important;
   }
 }
+
+@media(width: 768px){
+  .animated {
+    transition-property: none !important;
+    animation: none !important;
+  }
+}
+
+
+
+
+

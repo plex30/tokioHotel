@@ -44,10 +44,11 @@
             @endguest
         
     </ul>
-</nav>
     <div id="toggle">
         <div class="span"><img src="{{asset('./img/home/iconMenu.png')}}" width="30" height="30"></div>
     </div>
+</nav>
+    
 
 
 <div id="resize">
@@ -55,7 +56,7 @@
         <ul id="menu">
             <li><a href="{{route('experience.index')}}">Experiencias</a></li>
             <li><a href="">Reservas</a></li>
-            <li><a href="">Contacto</a></li>
+            <li><a href="{{route('contact.index')}}">Contacto</a></li>
             @guest
                             
                             @if (Route::has('register'))

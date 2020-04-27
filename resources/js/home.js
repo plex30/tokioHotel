@@ -34,7 +34,6 @@ window.onload = function () {
   )
 
 
-
   const parrallax = document.querySelector('.hero')
 
   function Scroll () {
