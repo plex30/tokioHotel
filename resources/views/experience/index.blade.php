@@ -7,7 +7,7 @@
 
 <nav>
     <div class="brand wow fadeInDown" id="brand">
-        <a href="{{url('/home')}}"><img src="{{asset('./img/home/lg.png')}}" width="80" height="80"></a>
+        <a href="{{url('/')}}"><img src="{{asset('./img/home/lg.png')}}" width="80" height="80"></a>
         </div>
         <div id="toggle">
             <div class="span"><img src="{{asset('./img/home/iconMenu.png')}}" width="30" height="30"></div>
