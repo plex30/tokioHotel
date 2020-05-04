@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Room extends Model
 {
     protected $fillable = [
-        'tipo', 'capacidad', 'n_habitacion', 'pvp'
+        'tipo', 'capacidad', 'n_habitacion', 'pvp', 'imagen'
     ];
 
     public function usrs(){

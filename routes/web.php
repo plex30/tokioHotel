@@ -22,8 +22,7 @@ Route::get('/', 'HomeController@index')->name('home');
 
 Route::get('experience', 'ExperienceController@index')->name('experience.index');
 Route::get('contact', 'ContactController@index')->name('contact.index');
-Route::get('reserve', 'CalendarController@index')->name('reserve.index');
-Route::get('reserve/{mes}', 'CalendarController@index_month');
+Route::get('reserve', 'ReserveController@index')->name('reserve.index');
 
 
 Auth::routes();
