@@ -18,13 +18,15 @@ use Illuminate\Support\Facades\Route;
     return view('home');
 }); */
 
+Route::get('/', 'HomeController@index')->name('home');
+
 Route::get('experience', 'ExperienceController@index')->name('experience.index');
 Route::get('contact', 'ContactController@index')->name('contact.index');
-
-
+Route::get('reserve', 'CalendarController@index')->name('reserve.index');
+Route::get('reserve/{mes}', 'CalendarController@index_month');
 
 
 Auth::routes();
 
-Route::get('/', 'HomeController@index')->name('home');
+
 

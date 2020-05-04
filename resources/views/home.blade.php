@@ -15,7 +15,7 @@
     <ul id="menu">
         <li><a href="">Inicio</a></li>
         <li><a href="{{route('experience.index')}}">Experiencias</a></li>
-        <li><a href="">Reservas</a></li>
+        <li><a href="{{route('reserve.index')}}">Reservas</a></li>
         <li><a href="{{route('contact.index')}}">Contacto</a></li>
         @guest
                             
@@ -141,30 +141,29 @@
           </div>
             <br>
         <div class="whitespace"></div>
-        <div class="backpic">
         <div class="row">
             <div class="col-lg-8"></div>
-            <div class="col-lg-4 project project1 wow fadeInRight" onclick="location.href='project.html'"></div>
+            <div class="col-lg-4 photo photo1 wow fadeInRight"></div>
 
         </div>
 
         <div class="whitespace"></div>
         <div class="row">
-            <div class="col-lg-4 project project2 wow fadeInLeft" onclick="location.href='project.html'"></div>
+            <div class="col-lg-4 photo photo2 wow fadeInLeft"></div>
             <div class="col-lg-6"></div>
         </div>
 
         <div class="whitespace"></div>
         <div class="row">
             <div class="col-lg-8"></div>
-            <div class="col-lg-4 project project3 wow fadeInRight" onclick="location.href='project.html'"></div>
+            <div class="col-lg-4 photo photo3 wow fadeInRight"></div>
             <div class="col-lg-3"></div>
         </div>
 
         <div class="whitespace"></div>
         <div class="row">
             
-            <div class="col-lg-4 project project4 wow fadeInLeft" onclick="location.href='project.html'"></div>
+            <div class="col-lg-4 photo photo4 wow fadeInLeft"></div>
             <div class="col-lg-6"></div>
         </div>
     </div>

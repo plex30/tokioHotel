@@ -167,6 +167,9 @@ nav #menu li a:hover{
         font-size: 20px;
         font-weight: 300;
     }
+    #resize #menu li{
+        margin-right: 35px;
+    }
     #resize li span{
         font-weight: bolder;
     }
@@ -249,16 +252,16 @@ h6{
     border-radius: 10px;
 }
 
-.project{
+.photo{
     height: 500px;
 }
 
-.project1{
+.photo1{
     background: url(../img/home/home1.jpg) no-repeat 50% 50%;
     background-size: cover;
 }
 
-.project1::after{
+.photo1::after{
     content: "Modernidad";
     font-family: "Quicksand";
     font-size: 36px;
@@ -271,12 +274,12 @@ h6{
     bottom: 0;
 }
 
-.project2{
+.photo2{
     background: url(../img/home/home2.jpg) no-repeat 50% 50% ;
     background-size: cover;
 }
 
-.project2::after{
+.photo2::after{
     content: "Diseño";
     font-family: "Quicksand";
     font-size: 36px;
@@ -289,12 +292,12 @@ h6{
     bottom: 0;
 }
 
-.project3{
+.photo3{
     background: url(../img/home/home3.jpg) no-repeat 50% 50%;
     background-size: cover;
 }
 
-.project3::after{
+.photo3::after{
     content: "Elegancia";
     font-family: "Quicksand";
     font-size: 36px;
@@ -308,12 +311,12 @@ h6{
 }
 
 
-.project4{
+.photo4{
     background: url(../img/home/home4.jpg) no-repeat 50% 50% ;
     background-size: cover;
 }
 
-.project4::after{
+.photo4::after{
     content: "Confort";
     font-family: "Quicksand";
     font-size: 36px;
@@ -327,7 +330,7 @@ h6{
 }
 
 @media(max-width: 768px){
-    .project{
+    .photo{
         width: 90% !important;
         margin: 14px auto;
     }
@@ -335,7 +338,7 @@ h6{
     .vertical{
         display: none;
     }
-    .project1::after, .project2::after, .project3::after, .project4::after{
+    .photo1::after, .photo2::after, .photo3::after, .photo4::after{
         display: none;
     }
 }
