@@ -4,7 +4,7 @@ html, body {
     padding: 0;
     width: 100%;
     height: 100%;
-    font-family: "Larsseit";
+    font-family: "Quicksand" !important;
     font-weight: lighter;
 }
 
@@ -14,8 +14,11 @@ nav {
     z-index: 1;
     position: fixed;
     width: 100%;
-    height: 60px;
+    height: 100px;
     border-bottom: 1px solid rgba(0,0,0,0.1);
+    background-color: #fff;
+    display: inline-block;
+    
 }
 
 nav.scrolled {
@@ -28,6 +31,135 @@ nav.scrolled {
     line-height: 60px;
     left: 1.4em;
 }
+
+nav .date li{
+    display: inline-block;
+}
+
+nav #brand{
+    float: left;
+    display: block;
+    margin-top: 8px;
+    margin-left: 15px;
+    line-height: 80px;
+    font-weight: bold;
+    position: fixed;
+}
+
+nav #brand a{
+    color: #000;
+    transition: all 0.3s ease-out;
+}
+
+
+nav #brand a:hover{
+    text-decoration: none;
+}
+
+.fecha{
+    text-align: start;
+}
+
+
+#toggle{
+    position: fixed;
+    right: 30px;
+    margin-top: 10px;
+    font-weight: 300;
+    z-index: 2;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    transition: all 1s ease-out; 
+    margin-top: 25px;
+ }
+
+ #close-btn{
+     position: absolute;
+     right: 30px;
+     z-index: 2;
+     cursor: pointer;
+     top: 88px;
+     line-height: 80px;
+ }
+ 
+ #resize{
+     z-index: 1;
+     top: 0px;
+     position: fixed;
+     background: #fff;
+     width: 100%;
+     height: 100%;
+     visibility: hidden;
+     opacity: 0;
+     transition: all 1s ease-out;
+ }
+ 
+ #resize #menu{
+     height: 90px;
+     position: absolute;
+     left: 45%;
+     transform: translateX(-40%);
+     text-align: center;
+     display: table-cell;
+     vertical-align: center;
+ }
+ 
+ #resize #menu li{
+     display: block;
+     text-align: center;
+     padding: 10px 0px;
+     margin-left: 50px;
+     font-size: 50px;
+     min-height: 50px;
+     font-weight: bold;
+     cursor: pointer;
+     transition: all 0.3s ease-out;
+ }
+ 
+ #resize li:nth-child(1) {
+     margin-top: 140px;
+ }
+ 
+ #resize #menu li a{
+     text-decoration: none;
+     color:#000;
+ }
+ 
+ #resize #menu li a:hover{
+     text-decoration: none;
+ }
+ 
+ #resize.active{
+     visibility: visible;
+     opacity: 1;
+ }
+
+ #toggle.on {
+     visibility: hidden;
+     opacity: 0;
+ }
+
+ 
+ @media(max-width: 768px){
+     #toggle{
+         margin-top: 6px;
+         margin-right: 4px;
+     }
+     #close-btn{
+         top: 12px;
+         right: 35px;
+     }
+     #resize #menu li{
+         margin-left: -3px;
+         font-size: 20px;
+         font-weight: lighter;
+     }
+     #resize li span{
+         font-weight: bolder;
+     }
+     
+ }
 
 .brand span a {
     position: absolute;
@@ -49,6 +181,10 @@ nav.scrolled {
     line-height: 60px;
     right: 1.4em;
     font-weight: 300;
+}
+
+.form-control{
+    font-size: 0.9rem;
 }
 
 /* MENU */
@@ -124,14 +260,14 @@ nav.scrolled {
     position: absolute;
     margin-top: 130px;
     margin-left: 40px;
-    font-family: "Playfair Display";
+    font-family: "Quicksand" !important;
     font-size: 24px;
     font-weight: 300;
 }
 
 a {
     color: grey !important;
-    font-family: "Larsseit";
+    font-family: "Quicksand" !important;
     font-size: 10px;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -197,7 +333,7 @@ img {
 }
 
 .section p {
-    font-family: "Playfair Display";
+    font-family: "Quicksand" !important;
     font-size: 24px;
     font-weight: 300;
 }
@@ -225,7 +361,7 @@ img {
 }
 
 .prod-sec p {
-    font-family: "Playfair Display";
+    font-family: "Quicksand" !important;
     font-size: 24px;
     font-weight: 300;
 }
@@ -243,7 +379,7 @@ img {
 }
 
 #price {
-    font-family: "Larsseit";
+    font-family: "Quicksand" !important;
     font-weight: 300;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -251,7 +387,7 @@ img {
 }
 
 .prod-list #prod-desc {
-    font-family: "Larsseit";
+    font-family: "Quicksand" !important;
     color: grey;
 }
 
@@ -272,7 +408,7 @@ img {
 
 footer p {
     text-align: center;
-    font-family: "Larsseit" !important;
+    font-family: "Quicksand" !important;
     font-size: 14px !important;
 }
 
@@ -289,7 +425,7 @@ footer p {
 }
 
 .collection #heading {
-    font-family: "Playfair Display";
+    font-family: "Quicksand" !important;
     font-size: 20px;
     margin-left: 50px;
     padding-bottom: 0;
@@ -339,7 +475,7 @@ footer p {
 }
 
 #prod-name {
-    font-family: "Playfair Display";
+    font-family: "Quicksand" !important;
 }
 
 .prod-opt #price {
@@ -349,7 +485,7 @@ footer p {
 .input-helper {
     position: relative;
     display: inline-block;
-    font-family: "Larsseit";
+    font-family: "Quicksand" !important;
     text-transform: uppercase;
     font-weight: 400;
     font-size: 10px;
@@ -384,7 +520,7 @@ input[type="radio"]:checked + label:before {
 }
 
 .product-sec ::placeholder, input {
-    font-family: "Larsseit";
+    font-family: "Quicksand" !important;
     text-transform: uppercase;
     font-weight: 400;
     font-size: 10px;
@@ -437,7 +573,7 @@ input[type="radio"]:checked + label:before {
 
 #hero-title {
     position: absolute;
-    font-family: "Playfair Display";
+    font-family: "Quicksand" !important;
     top: 55%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -455,13 +591,13 @@ input[type="radio"]:checked + label:before {
 }
 
 .content p {
-    font-family: "Larsseit";
+    font-family: "Quicksand" !important;
     font-weight: 300;
     color: rgba(0,0,0,0.6);
 }
 
 #blockquote {
-    font-family: "Playfair Display";
+    font-family: "Quicksand" !important;
     font-style: italic;
     font-size: 24px;
     padding: 30px 20px;
@@ -472,7 +608,7 @@ input[type="radio"]:checked + label:before {
 /* CONTACT */
 
 form label, textarea {
-    font-family: "Larsseit";
+    font-family: "Quicksand" !important;
     font-size: 12px;
     text-transform: uppercase;
     letter-spacing: 2px;

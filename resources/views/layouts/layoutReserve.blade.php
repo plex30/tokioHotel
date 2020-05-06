@@ -9,12 +9,7 @@
     <title>@yield('title')</title>
 </head>
 <body>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.25.3/locale/af.min.js"></script>
     <script src="{{asset('../resources/js/reserve.js')}}"></script>
-    <script src="moment.js"></script>
-<script>
-    moment().format();
-</script>
     @yield('content')
 </body>
 </html>

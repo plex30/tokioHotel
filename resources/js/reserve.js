@@ -1,5 +1,17 @@
-var fechaEmision = moment(document.getElementById('fecha_emision').value, 'YYYY/MM/DD');
-var fechaExpiracion = moment(document.getElementById('fecha_expiracion').value, 'YYYY/MM/DD');
+window.onload = function () {
+ 
+    document.getElementById('toggle').addEventListener('click', changeMenu)
+    document.getElementById('close-btn').addEventListener('click', changeMenu)
+    
+    const link = document.getElementById('resize').querySelectorAll('a')
+    link.forEach(function (e) {
+      e.addEventListener('click', changeMenu)
+    })
+  
+    function changeMenu () {
+      this.classList.toggle('on');
+      document.getElementById('resize').classList.toggle('active')
+    }
 
-var diasDiferencia = fechaExpiracion.diff(fechaEmision, 'days');
-console.log(diasDiferencia)
+
+}
