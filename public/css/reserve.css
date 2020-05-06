@@ -10,7 +10,7 @@ html, body {
 
 /* NAVIGATION BAR */
 
-.nav {
+nav {
     z-index: 1;
     position: fixed;
     width: 100%;
@@ -18,7 +18,7 @@ html, body {
     border-bottom: 1px solid rgba(0,0,0,0.1);
 }
 
-.nav.scrolled {
+nav.scrolled {
     background-color: #fff !important;
     transition: background-color 300ms linear;
 }

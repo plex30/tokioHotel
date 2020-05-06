@@ -9,7 +9,7 @@ class ReserveController extends Controller
 {
     public function index()
     {
-        $rm = Room::orderBy('n_habitacion');
+        $rm = Room::all();
         return view("reserve.index", compact('rm'));
     }
 

@@ -22,7 +22,7 @@ class RoomTableSeeder extends Seeder
             'capacidad'=>'2',
             'n_habitacion'=>'1',
             'pvp'=>'60',
-            'imagen'=> '/img/coches/doble.jpg'
+            'imagen'=> '/img/room/doble.jpg'
         ]);
 
         Room::create([
@@ -30,7 +30,7 @@ class RoomTableSeeder extends Seeder
             'capacidad'=>'2',
             'n_habitacion'=>'2',
             'pvp'=>'60',
-            'imagen'=> '/img/coches/doble2.jpg'
+            'imagen'=> '/img/room/doble2.jpg'
         ]);
 
         Room::create([
@@ -38,7 +38,7 @@ class RoomTableSeeder extends Seeder
             'capacidad'=>'2',
             'n_habitacion'=>'3',
             'pvp'=>'60',
-            'imagen'=> '/img/coches/doble3.jpg'
+            'imagen'=> '/img/room/doble3.jpg'
         ]);
 
         Room::create([
@@ -46,7 +46,7 @@ class RoomTableSeeder extends Seeder
             'capacidad'=>'2',
             'n_habitacion'=>'4',
             'pvp'=>'60',
-            'imagen'=> '/img/coches/triple.jpg'
+            'imagen'=> '/img/room/triple.jpg'
         ]);
 
         Room::create([
@@ -54,7 +54,7 @@ class RoomTableSeeder extends Seeder
             'capacidad'=>'2',
             'n_habitacion'=>'5',
             'pvp'=>'60',
-            'imagen'=> '/img/coches/triple2.jpg'
+            'imagen'=> '/img/room/triple2.jpg'
         ]);
 
         Room::create([
@@ -62,7 +62,7 @@ class RoomTableSeeder extends Seeder
             'capacidad'=>'2',
             'n_habitacion'=>'6',
             'pvp'=>'60',
-            'imagen'=> '/img/coches/triple3.jpg'
+            'imagen'=> '/img/room/triple3.jpg'
         ]);
 
         Room::create([
@@ -70,7 +70,7 @@ class RoomTableSeeder extends Seeder
             'capacidad'=>'3',
             'n_habitacion'=>'7',
             'pvp'=>'80',
-            'imagen'=> '/img/coches/triple.jpg'
+            'imagen'=> '/img/room/triple.jpg'
         ]);
 
         Room::create([
@@ -78,7 +78,7 @@ class RoomTableSeeder extends Seeder
             'capacidad'=>'3',
             'n_habitacion'=>'8',
             'pvp'=>'80',
-            'imagen'=> '/img/coches/doblet.jpg'
+            'imagen'=> '/img/room/doblet.jpg'
         ]);
 
         Room::create([
@@ -86,7 +86,7 @@ class RoomTableSeeder extends Seeder
             'capacidad'=>'3',
             'n_habitacion'=>'9',
             'pvp'=>'80',
-            'imagen'=> '/img/coches/doblet2.jpg'
+            'imagen'=> '/img/room/doblet2.jpg'
         ]);
 
         Room::create([
@@ -94,7 +94,7 @@ class RoomTableSeeder extends Seeder
             'capacidad'=>'3',
             'n_habitacion'=>'10',
             'pvp'=>'80',
-            'imagen'=> '/img/coches/doblet3.jpg'
+            'imagen'=> '/img/room/doblet3.jpg'
         ]);
     }
 }
