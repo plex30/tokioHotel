@@ -18,6 +18,22 @@ class RoomTableSeeder extends Seeder
         DB::statement('SET FOREIGN_KEY_CHECKS=1;');
 
         Room::create([
+            'tipo'=>'Individual',
+            'capacidad'=>'1',
+            'n_habitacion'=>'11',
+            'pvp'=>'60',
+            'imagen'=> '/img/room/doble.jpg'
+        ]);
+
+        Room::create([
+            'tipo'=>'Individual',
+            'capacidad'=>'1',
+            'n_habitacion'=>'12',
+            'pvp'=>'60',
+            'imagen'=> '/img/room/doble.jpg'
+        ]);
+
+        Room::create([
             'tipo'=>'Doble',
             'capacidad'=>'2',
             'n_habitacion'=>'1',

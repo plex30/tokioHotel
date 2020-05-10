@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateUserRoomTable extends Migration
+class CreateRoomUserTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,12 @@ class CreateUserRoomTable extends Migration
      */
     public function up()
     {
-        Schema::create('user_room', function (Blueprint $table) {
+        Schema::create('room_user', function (Blueprint $table) {
             $table->id();
             $table->bigInteger('user_id')->unsigned();
             $table->bigInteger('room_id')->unsigned();
-            $table->date('f_entrada');
-            $table->date('f_salida');
+            $table->date('f_entrada')->nullable();
+            $table->date('f_salida')->nullable();
             $table->timestamps();
 
             $table->foreign('user_id')
@@ -42,6 +42,6 @@ class CreateUserRoomTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('user_room');
+        Schema::dropIfExists('room_user');
     }
 }
