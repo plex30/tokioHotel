@@ -16,25 +16,27 @@
 
   <form name="search" action="{{route('reserve.index')}}" method="get">
         <div class="form-group row justify-content-center mt-4">
-              
-                    <label for="capacidad" class="col-xs-2 mr-3 mt-2">Personas</label>
-                    <select class="form-control col-sm-1 mr-3" name="capacidad">
+         <label for="entrada" class="col-xs-2 mr-3 mt-2">Entrada</label>
+          <div class="col-sm-2">
+            <input type="date" class="form-control" name="entrada" >
+          </div>
+      
+          <label for="salida" class="col-xs-2 mr-3 mt-2">Salida</label>
+          <div class="col-sm-2">
+            <input type="date" class="form-control" name="salida">
+          </div>
+     
+          <label for="capacidad" class="col-xs-2 mr-3 mt-2">Personas</label>
+          <div class="col-sm-2">
+                    <select class="form-control col-sm-8 mr-3" name="capacidad">
                       <option value="0"></option>    
                       <option value="1">1 Adulto</option>
                       <option value="2">2 Adultos</option>
                       <option value="3">3 Adultos</option>
                     </select>
-                  
-          <label for="entrada" class="col-xs-2 mr-3 mt-2">Entrada</label>
-          <div class="col-sm-2">
-            <input type="date" class="form-control" name="entrada" >
-          </div>
-        
-          <label for="salida" class="col-xs-2 mr-3 mt-2">Salida</label>
-          <div class="col-sm-2">
-            <input type="date" class="form-control" name="salida">
-          </div>
-          <button type="submit" class="btn btn-outline-dark ml-3">Ver Disponibilidad</button>
+          </div>      
+          <button type="submit" class="btn btn-outline-dark ml-3" id="boton">Ver Disponibilidad</button>
+
         </div>
         
       </form>
@@ -73,34 +75,43 @@
       </ul>
 </div>
 </div>
-<div id="container">	
-	
-  
-    <div class="product-details">
-      
-    <h1>Habitación {{$room->tipo}}</h1>
-      
-  </div>
+            <div id="container">	
+	              <div class="product-details">
+                  <h1>Habitación {{$room->tipo}}</h1>
+                  <ul>
+                    <li><i class="fa fa-arrows-alt"></i> 82m²</li>
+                    <li> <i class="fa fa-fan"></i> Aire acondicionado</li>
+                    <li><i class="fa fa-shower"></i> Baño en la habitación</li>
+                    <li><i class="fa fa-tv"></i> Tv en la habitación</li>
+                    <li><i class="fa fa-wifi"></i> Wifi gratis</li>
+                    <li><i class="fa fa-volume-mute"></i> Insonorización</li>
+                  </ul>
+
+                <h2>Precio por noche: {{$room->pvp}}€</h2>
+                </div>
     
-  <div class="product-image">
-    
-  <img src="{{asset($room->imagen)}}">
-    
-  <!-- 	product Information-->
-  <div class="info">
-    <h2>The Description</h2>
-    <ul>
-      <li><strong>Sun Needs: </strong>Full Sun</li>
-      <li><strong>Soil Needs: </strong>Damp</li>
-      <li><strong>Zones: </strong>9 - 11</li>
-      <li><strong>Height: </strong>2 - 3 feet</li>
-      <li><strong>Blooms in: </strong>Mid‑Summer - Mid‑Fall</li>
-      <li><strong>Features: </strong>Tolerates heat</li>
-    </ul>
-  </div>
-  </div>
-  <!--  End product image  -->
-  
-  
+            <div class="product-image">
+                <img src="{{asset($room->imagen)}}">
+            
+              <div class="info">
+                    <ul>
+                      <li><b>Tamaño de la habitación 83 m²</b><br>
+                        Esta habitación esquinera tiene 2 camas individuales, aire acondicionado, hervidor eléctrico y minibar.<br></li>
+                      <li> <b>En el baño privado:</b><br>
+                        Artículos de aseo gratis<br>
+                        Toallas<br>
+                        Bañera o ducha<br>
+                        Secador de pelo<br></li>
+                      <li> <b>Equipamiento de la habitación: </b><br>
+                        Minibar<br>
+                        Caja fuerte<br>
+                        Sofá, Mesa de comedor, Escritorio<br>
+                        Canales vía satélite<br>
+                      </li>
+                      
+                    </ul>
+             </div>
+
+            </div>
   </div>
 @endsection
