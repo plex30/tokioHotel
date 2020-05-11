@@ -7,11 +7,11 @@
 
 <nav>
       <span id="brand">
-      <a href=""><img src="{{asset('./img/home/lg.png')}}" width="120" height="120"></a>
+      <a href="{{url('/')}}"><img src="{{asset('./img/home/lg.png')}}" width="120" height="120"></a>
       </span>
   
       <ul id="menu">
-          <li><a href="">Inicio</a></li>
+          <li><a href="{{url('/')}}">Inicio</a></li>
           <li><a href="{{route('experience.index')}}">Experiencias</a></li>
           <li><a href="{{route('reserve.index')}}">Reservas</a></li>
           <li><a href="{{route('contact.index')}}">Contacto</a></li>
@@ -28,6 +28,13 @@
                                   </a>
   
                                   <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                      
+                                      <a class="dropdown-item" href="{{ route('logout') }}">
+                                          {{ __('Editar mi perfil') }}
+                                      </a>
+                                      <a class="dropdown-item" href="{{ route('logout') }}">
+                                          {{ __('Mis reservas') }}
+                                      </a>
                                       <a class="dropdown-item" href="{{ route('logout') }}"
                                          onclick="event.preventDefault();
                                                        document.getElementById('logout-form').submit();">
@@ -82,9 +89,16 @@
               @endguest
           </ul>
   </div>
-
+  
 <div class="container-fluid">
-      
+    @if(Session::get('mensaje'))
+    <script>
+        $( document ).ready(function() {
+        $('#myModal').modal('toggle')
+    });
+    </script>
+    
+      @endif
 @foreach ($room as $item)
    <div class="row product-sec">
          <div class="col-lg-6 prod-left">
@@ -107,6 +121,30 @@
                </div>
          </div>
    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+            <h4 class="modal-title">¡Todo Listo!</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          
+        </div>
+        <div class="modal-body">
+          <p>{{Session::get('mensaje')}}</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Tokio Hotel</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  
 </div>
 @endforeach
 

@@ -14,16 +14,17 @@
         <div class="span"><img src="{{asset('./img/home/iconMenu.png')}}" width="30" height="30"></div>
   </div>
 
-  <form name="search" action="{{route('reserve.index')}}" method="get">
+  <form name="search" action="{{route('reserve.reserva')}}" method="post">
+    @csrf
         <div class="form-group row justify-content-center mt-4">
-         <label for="entrada" class="col-xs-2 mr-3 mt-2">Entrada</label>
+        <label for="entrada" class="col-xs-2 mr-3 mt-2">Entrada</label>
           <div class="col-sm-2">
-            <input type="date" class="form-control" name="entrada" >
+            <input type="date" class="form-control" name="f_entrada" value="{{old('entrada')}}">
           </div>
       
           <label for="salida" class="col-xs-2 mr-3 mt-2">Salida</label>
           <div class="col-sm-2">
-            <input type="date" class="form-control" name="salida">
+            <input type="date" class="form-control" name="f_salida" value="{{old('salida')}}">
           </div>
      
           <label for="capacidad" class="col-xs-2 mr-3 mt-2">Personas</label>
@@ -34,8 +35,10 @@
                       <option value="2">2 Adultos</option>
                       <option value="3">3 Adultos</option>
                     </select>
-          </div>      
-          <button type="submit" class="btn btn-outline-dark ml-3" id="boton">Ver Disponibilidad</button>
+          </div> 
+          <input type="hidden" name="idRoom" value="{{$room->id}}">
+          <input type="hidden" name="idUser" value="{{auth()->id()}}">  
+          <button type="submit" class="btn btn-outline-dark ml-3" id="boton" data-toggle="modal" data-target="#myModal" onclick="confirm('¿Esta seguro que desea hacer la reserva de esta habitación?')">Ver Disponibilidad</button>
 
         </div>
         
@@ -75,6 +78,15 @@
       </ul>
 </div>
 </div>
+@if ($errors->any())
+<div class="alert alert-danger my-2">
+    <ul>
+        @foreach ($errors->all() as $error)
+            <li>{{ $error }}</li>
+        @endforeach
+    </ul>
+</div>
+@endif
             <div id="container">	
 	              <div class="product-details">
                   <h1>Habitación {{$room->tipo}}</h1>
@@ -92,6 +104,7 @@
     
             <div class="product-image">
                 <img src="{{asset($room->imagen)}}">
+                
             
               <div class="info">
                     <ul>
@@ -113,5 +126,31 @@
              </div>
 
             </div>
+
+
   </div>
+
+  <div id="container-no">	
+    <div class="product-image">
+      <img src="{{asset($room->imagen)}}"class="responsive" ></div>
+    
+      <h1>Habitación {{$room->tipo}}</h1>
+      <ul>
+        <li><i class="fa fa-arrows-alt"></i> 82m²</li>
+        <li> <i class="fa fa-fan"></i> Aire acondicionado</li>
+        <li><i class="fa fa-shower"></i> Baño en la habitación</li>
+        <li><i class="fa fa-tv"></i> Tv en la habitación</li>
+        <li><i class="fa fa-wifi"></i> Wifi gratis</li>
+        <li><i class="fa fa-volume-mute"></i> Insonorización</li>
+      </ul>
+
+    <h2>Precio por noche: {{$room->pvp}}€</h2>
+    
+    <div class="container">
+      <h2>Basic Modal Example</h2>
+      <!-- Trigger the modal with a button -->
+      <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>
+    
+      
+
 @endsection
