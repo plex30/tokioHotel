@@ -2,11 +2,14 @@
 
 namespace App\Http\Requests;
 
+use App\Room;
 use Carbon\Carbon;
+
 use Illuminate\Foundation\Http\FormRequest;
 
 class ReservaRequest extends FormRequest
 {
+    
     /**
      * Determine if the user is authorized to make this request.
      *
@@ -19,22 +22,37 @@ class ReservaRequest extends FormRequest
 
     public function prepareForValidation()
     {
-
+        
         $fecha1=Carbon::parse($this->f_entrada);
         $fecha2=Carbon::parse($this->f_salida);
         $hoy=Carbon::now();
         $room = Room::find($this->idRoom);
+
         foreach ($room->usrs as $item) {
             $ent = Carbon::parse($item->pivot->f_entrada);
             $sal = Carbon::parse($item->pivot->f_salida);
-            if($ent == $fecha1 && $sal == $fecha2){
+            if ($fecha1 < $ent) {
+                if ($fecha2 > $ent){
+                $num2=0;
+                $this->merge([
+                    'num2'=>$num2
+                    ]);}
+
+            } elseif ($fecha1 > $ent) {
+                if ($fecha2 < $sal) {
+                    $num2=0;
+                    $this->merge([
+                        'num2'=>$num2
+                        ]);}
+
+            } elseif ($fecha1 == $ent) {
                 $num2=0;
                 $this->merge([
                     'num2'=>$num2
                     ]);
             }
-             
         }
+    
         
         if($fecha1->gt($fecha2)){
             $num1=0;
@@ -53,6 +71,8 @@ class ReservaRequest extends FormRequest
 
     }
 
+   
+
     /**
      * Get the validation rules that apply to the request.
      *
@@ -66,9 +86,9 @@ class ReservaRequest extends FormRequest
             'f_salida' => ['required'],
             'num0'=>['nullable', 'not_in:0'],
             'num1'=>['nullable', 'not_in:0'],
-            'num2'=>['nullable', 'not_in:0'],
-            'idRoom'=>['required'],
-            'idUser'=>['required']
+            'num2'=>['nullable', 'not_in:0']
+            /* 'idRoom'=>['required'],
+            'idUser'=>['required'] */
 
         ];
     }

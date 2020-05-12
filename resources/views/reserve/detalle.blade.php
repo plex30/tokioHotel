@@ -79,13 +79,37 @@
 </div>
 </div>
 @if ($errors->any())
-<div class="alert alert-danger my-2">
+<div class="modal fade" id="myModal" role="dialog">
+  <div class="modal-dialog">
+  
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+          <h4 class="modal-title">¡Algo salio mal!</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        
+      </div>
+      <div class="modal-body">
+        <ul>
+          @foreach ($errors->all() as $error)
+              <li>{{ $error }}</li>
+          @endforeach
+      </ul>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Tokio Hotel</button>
+      </div>
+    </div>
+    
+  </div>
+</div>
+{{-- <div class="alert alert-danger my-2" id="error">
     <ul>
         @foreach ($errors->all() as $error)
             <li>{{ $error }}</li>
         @endforeach
     </ul>
-</div>
+</div> --}}
 @endif
             <div id="container">	
 	              <div class="product-details">

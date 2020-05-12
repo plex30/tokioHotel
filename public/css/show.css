@@ -353,3 +353,9 @@ ul{
     overflow: auto;
     overflow-y: auto;
  }
+
+ #error{
+     position: relative;
+     height: 10%;
+
+ }

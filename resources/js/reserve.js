@@ -12,7 +12,6 @@ window.onload = function () {
       this.classList.toggle('on');
       document.getElementById('resize').classList.toggle('active')
     }
-
    
 
 }
