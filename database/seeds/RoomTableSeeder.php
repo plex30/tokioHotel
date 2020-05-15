@@ -18,99 +18,138 @@ class RoomTableSeeder extends Seeder
         DB::statement('SET FOREIGN_KEY_CHECKS=1;');
 
         Room::create([
-            'tipo'=>'Individual',
+            'tipo'=>'Individual Basic',
             'capacidad'=>'1',
-            'n_habitacion'=>'11',
-            'pvp'=>'60',
-            'imagen'=> '/img/room/doble.jpg'
-        ]);
-
-        Room::create([
-            'tipo'=>'Individual',
-            'capacidad'=>'1',
-            'n_habitacion'=>'12',
-            'pvp'=>'60',
-            'imagen'=> '/img/room/doble.jpg'
-        ]);
-
-        Room::create([
-            'tipo'=>'Doble',
-            'capacidad'=>'2',
             'n_habitacion'=>'1',
-            'pvp'=>'60',
-            'imagen'=> '/img/room/doble.jpg'
+            'tamano'=>'20m²',
+            'pvp'=>'50',
+            'imagen'=> '/img/room/indBas1.jpg'
         ]);
 
         Room::create([
-            'tipo'=>'Doble',
-            'capacidad'=>'2',
+            'tipo'=>'Individual Basic',
+            'capacidad'=>'1',
             'n_habitacion'=>'2',
-            'pvp'=>'60',
-            'imagen'=> '/img/room/doble2.jpg'
+            'tamano'=>'20m²',
+            'pvp'=>'50',
+            'imagen'=> '/img/room/indBas1.jpg'
         ]);
 
         Room::create([
-            'tipo'=>'Doble',
-            'capacidad'=>'2',
+            'tipo'=>'Individual Executive',
+            'capacidad'=>'1',
             'n_habitacion'=>'3',
-            'pvp'=>'60',
-            'imagen'=> '/img/room/doble3.jpg'
+            'tamano'=>'30m²',
+            'pvp'=>'80',
+            'imagen'=> '/img/room/indBas2.jpg'
         ]);
 
         Room::create([
-            'tipo'=>'Doble',
-            'capacidad'=>'2',
+            'tipo'=>'Individual Executive',
+            'capacidad'=>'1',
             'n_habitacion'=>'4',
-            'pvp'=>'60',
-            'imagen'=> '/img/room/triple.jpg'
+            'tamano'=>'30m²',
+            'pvp'=>'80',
+            'imagen'=> '/img/room/indBas2.jpg'
         ]);
 
         Room::create([
-            'tipo'=>'Doble',
-            'capacidad'=>'2',
+            'tipo'=>'Individual Deluxe',
+            'capacidad'=>'1',
             'n_habitacion'=>'5',
-            'pvp'=>'60',
-            'imagen'=> '/img/room/triple2.jpg'
+            'tamano'=>'50m²',
+            'pvp'=>'150',
+            'imagen'=> '/img/room/indBas3.jpg'
         ]);
 
         Room::create([
-            'tipo'=>'Doble',
+            'tipo'=>'Doble Basic',
             'capacidad'=>'2',
             'n_habitacion'=>'6',
+            'tamano'=>'50m²',
             'pvp'=>'60',
-            'imagen'=> '/img/room/triple3.jpg'
+            'imagen'=> '/img/room/dobBas1.jpg'
         ]);
 
         Room::create([
-            'tipo'=>'Triple',
-            'capacidad'=>'3',
+            'tipo'=>'Doble Basic',
+            'capacidad'=>'2',
             'n_habitacion'=>'7',
-            'pvp'=>'80',
-            'imagen'=> '/img/room/triple.jpg'
+            'tamano'=>'50m²',
+            'pvp'=>'60',
+            'imagen'=> '/img/room/dobBas1.jpg'
         ]);
 
         Room::create([
-            'tipo'=>'Triple',
-            'capacidad'=>'3',
+            'tipo'=>'Doble Experience',
+            'capacidad'=>'2',
             'n_habitacion'=>'8',
+            'tamano'=>'60m²',
             'pvp'=>'80',
-            'imagen'=> '/img/room/doblet.jpg'
+            'imagen'=> '/img/room/dobBas2.jpg'
         ]);
 
         Room::create([
-            'tipo'=>'Triple',
-            'capacidad'=>'3',
+            'tipo'=>'Doble Experience',
+            'capacidad'=>'2',
             'n_habitacion'=>'9',
+            'tamano'=>'60m²',
             'pvp'=>'80',
-            'imagen'=> '/img/room/doblet2.jpg'
+            'imagen'=> '/img/room/dosBas2.jpg'
         ]);
 
         Room::create([
-            'tipo'=>'Triple',
-            'capacidad'=>'3',
+            'tipo'=>'Doble Deluxe',
+            'capacidad'=>'2',
             'n_habitacion'=>'10',
-            'pvp'=>'80',
-            'imagen'=> '/img/room/doblet3.jpg'
+            'tamano'=>'80m²',
+            'pvp'=>'190',
+            'imagen'=> '/img/room/dosBas3.jpg'
+        ]);
+
+        Room::create([
+            'tipo'=>'Triple Basic',
+            'capacidad'=>'3',
+            'n_habitacion'=>'11',
+            'tamano'=>'80m²',
+            'pvp'=>'120',
+            'imagen'=> '/img/room/tripBas1.jpg'
+        ]);
+
+        Room::create([
+            'tipo'=>'Triple Basic',
+            'capacidad'=>'3',
+            'n_habitacion'=>'12',
+            'tamano'=>'80m²',
+            'pvp'=>'120',
+            'imagen'=> '/img/room/tripBas1.jpg'
+        ]);
+
+        Room::create([
+            'tipo'=>'Triple Executive',
+            'capacidad'=>'3',
+            'n_habitacion'=>'13',
+            'tamano'=>'120m²',
+            'pvp'=>'130',
+            'imagen'=> '/img/room/tripBas2.jpg'
+        ]);
+
+        Room::create([
+            'tipo'=>'Triple Executive',
+            'capacidad'=>'3',
+            'n_habitacion'=>'14',
+            'tamano'=>'120m²',
+            'pvp'=>'130',
+            'imagen'=> '/img/room/tripBas2.jpg'
+        ]);
+
+        Room::create([
+            'tipo'=>'Triple Deluxe',
+            'capacidad'=>'3',
+            'n_habitacion'=>'15',
+            'tamano'=>'200m²',
+            'pvp'=>'280',
+            'imagen'=> '/img/room/tripBas3.jpg'
         ]);
     }
 }

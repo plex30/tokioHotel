@@ -20,6 +20,7 @@
 </head>
 <body>
     <script src="{{asset('../resources/js/reserve.js')}}"></script>
+    <script src="simplescrollup.js"></script>
     @yield('content')
 </body>
 </html>

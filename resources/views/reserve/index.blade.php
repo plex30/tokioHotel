@@ -47,7 +47,25 @@
                                   </div>
                               </li>
               @endguest
-          
+              
+                <form action="{{route('reserve.index')}}" id="capacidad" method="GET" name="search">
+                <div class="form-group">
+                <label for="capacidad" class="float-right col-md-8">Seleccione el tipo de habitación: </label>
+                <div class="input-group col-md-8 float-right" >
+                          <select class="form-control col-sm-6" name="capacidad" style="display: inline-block;">
+                            <option value="0"></option>
+                            <option value="1">Individual</option>
+                            <option value="2">Doble</option>
+                            <option value="3">Triple</option>
+                          </select>
+                          <span class="input-group-btn">        
+                <button type="submit" class="btn btn-outline-dark ml-2" style="display: inline-block;">Seleccionar</button>
+                          </span>
+                </div>
+
+            </div>
+              </form>
+             
       </ul>
       <div id="toggle">
           <div class="span"><img src="{{asset('./img/home/iconMenu.png')}}" width="30" height="30"></div>
@@ -89,7 +107,6 @@
               @endguest
           </ul>
   </div>
-  
 <div class="container-fluid">
     @if(Session::get('mensaje'))
     <script>
@@ -99,11 +116,13 @@
     </script>
     
       @endif
+      
+       
 @foreach ($room as $item)
    <div class="row product-sec">
          <div class="col-lg-6 prod-left">
                <div class="hero-image">
-                     <img src="{{asset($item->imagen)}}" class="img wow fadeInUp" alt="">
+                     <img src="{{asset($item->imagen)}}" class="img wow fadeInLeft">
                </div>
          </div>
 
@@ -111,7 +130,7 @@
                <div class="prod-opt">
                      <h3 id="prod-name" class="wow fadeInUp" data-wow-delay="0.4s">Habitación {{$item->tipo}}</h3>
                      <p id="price" class="wow fadeInUp" data-wow-delay="0.5s">Precio: {{$item->pvp}} € /noche</p>
-                        
+                     <p id="price" class="wow fadeInUp" data-wow-delay="0.5s">Tamaño: {{$item->tamano}} </p> 
                      <div class="add-prod wow fadeInUp" data-wow-delay="1.1s">
                         <form action="{{route('reserve.show', $item)}}">
                             <input type="hidden" name="id" value="{{$item->id}}">

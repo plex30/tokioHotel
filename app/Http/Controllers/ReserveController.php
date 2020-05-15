@@ -13,9 +13,9 @@ class ReserveController extends Controller
 {
     public function index(Request $request)
     {
-        
-        $room = Room::all();
-        return view("reserve.index", compact('room'));
+        $cap = $request->input('capacidad');
+        $room = Room::capacidad($cap)->get();
+        return view("reserve.index", compact('room', 'request'));
     }
 
     public function reserva(ReservaRequest $request){

@@ -18,6 +18,7 @@ class CreateRoomsTable extends Migration
             $table->string('tipo');
             $table->integer('capacidad')->unsigned();
             $table->integer('n_habitacion')->unsigned();
+            $table->string('tamano');
             $table->float('pvp', 7, 2);
             $table->string('imagen');
             $table->timestamps();

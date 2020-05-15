@@ -27,15 +27,6 @@
             <input type="date" class="form-control" name="f_salida" value="{{old('salida')}}">
           </div>
      
-          <label for="capacidad" class="col-xs-2 mr-3 mt-2">Personas</label>
-          <div class="col-sm-2">
-                    <select class="form-control col-sm-8 mr-3" name="capacidad">
-                      <option value="0"></option>    
-                      <option value="1">1 Adulto</option>
-                      <option value="2">2 Adultos</option>
-                      <option value="3">3 Adultos</option>
-                    </select>
-          </div> 
           <input type="hidden" name="idRoom" value="{{$room->id}}">
           <input type="hidden" name="idUser" value="{{auth()->id()}}">  
           <button type="submit" class="btn btn-outline-dark ml-3" id="boton" data-toggle="modal" data-target="#myModal" onclick="confirm('¿Esta seguro que desea hacer la reserva de esta habitación?')">Ver Disponibilidad</button>
@@ -79,6 +70,18 @@
 </div>
 </div>
 @if ($errors->any())
+<script>
+  $( document ).ready(function() {
+  /* $('#myModal').modal('toggle') */
+
+  $('#myModal').on('hidden', function () {
+  if($(this).find('div .alert').length){
+      $(this).find('div .alert').remove();
+  }
+});
+  
+});
+</script>
 <div class="modal fade" id="myModal" role="dialog">
   <div class="modal-dialog">
   
@@ -90,11 +93,13 @@
         
       </div>
       <div class="modal-body">
-        <ul>
+        <div class="alert">
+          <ul>
           @foreach ($errors->all() as $error)
-              <li>{{ $error }}</li>
+            <li>{{ $error }}</li>
           @endforeach
-      </ul>
+          </ul>
+        </div>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Tokio Hotel</button>
@@ -103,6 +108,9 @@
     
   </div>
 </div>
+@endif
+
+
 {{-- <div class="alert alert-danger my-2" id="error">
     <ul>
         @foreach ($errors->all() as $error)
@@ -110,12 +118,12 @@
         @endforeach
     </ul>
 </div> --}}
-@endif
+
             <div id="container">	
 	              <div class="product-details">
-                  <h1>Habitación {{$room->tipo}}</h1>
+                  <h1>{{$room->tipo}}</h1>
                   <ul>
-                    <li><i class="fa fa-arrows-alt"></i> 82m²</li>
+                    <li><i class="fa fa-arrows-alt"></i> {{$room->tamano}}</li>
                     <li> <i class="fa fa-fan"></i> Aire acondicionado</li>
                     <li><i class="fa fa-shower"></i> Baño en la habitación</li>
                     <li><i class="fa fa-tv"></i> Tv en la habitación</li>
@@ -132,7 +140,7 @@
             
               <div class="info">
                     <ul>
-                      <li><b>Tamaño de la habitación 83 m²</b><br>
+                      <li><b>Tamaño de la habitación {{$room->tamano}}</b><br>
                         Esta habitación esquinera tiene 2 camas individuales, aire acondicionado, hervidor eléctrico y minibar.<br></li>
                       <li> <b>En el baño privado:</b><br>
                         Artículos de aseo gratis<br>
@@ -167,14 +175,8 @@
         <li><i class="fa fa-wifi"></i> Wifi gratis</li>
         <li><i class="fa fa-volume-mute"></i> Insonorización</li>
       </ul>
-
+  </div>
     <h2>Precio por noche: {{$room->pvp}}€</h2>
     
-    <div class="container">
-      <h2>Basic Modal Example</h2>
-      <!-- Trigger the modal with a button -->
-      <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>
-    
-      
 
 @endsection

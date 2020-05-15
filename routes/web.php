@@ -24,8 +24,8 @@ Route::get('experience', 'ExperienceController@index')->name('experience.index')
 Route::get('contact', 'ContactController@index')->name('contact.index');
 Route::resource('reserve', 'ReserveController');
 Route::resource('user', 'UserController');
-/* Route::get('reserve', 'ReserveController@index')->name('reserve.index');
-Route::post('reserve/show/{id}', 'ReserveController@showReserva')->name('reserve.show'); */
+/* Route::get('reserve', 'ReserveController@index')->name('reserve.index'); */
+/* Route::post('reserve/show/{id}', 'ReserveController@showReserva')->name('reserve.show'); */ 
 Route::post('reserve', 'ReserveController@reserva')->name('reserve.reserva');
 
 
