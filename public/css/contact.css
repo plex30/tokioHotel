@@ -150,6 +150,25 @@ nav #brand a:hover{
     background: #fff;
 }
 
+.card a{
+    position: absolute;
+}
+
+#i1{
+    margin-top: 326px;
+    margin-left: 8px;
+}
+
+#i2{
+    margin-top: 280px;
+    margin-left: 5px;
+}
+
+#i3{
+    margin-top: 240px;
+    margin-left: 1px;
+}
+
 .card-img {
     background-position: center;
     width: 80%;

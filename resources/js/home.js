@@ -1,3 +1,4 @@
+
 window.onload = function () {
  
   document.getElementById('toggle').addEventListener('click', changeMenu)
@@ -6,6 +7,8 @@ window.onload = function () {
   const link = document.getElementById('resize').querySelectorAll('a')
   link.forEach(function (e) {
     e.addEventListener('click', changeMenu)
+
+    
   })
 
   function changeMenu () {
@@ -43,4 +46,3 @@ window.onload = function () {
 
   window.addEventListener('scroll', Scroll)
 }
-require('./bootstrap');

@@ -95,7 +95,7 @@ class RoomTableSeeder extends Seeder
             'n_habitacion'=>'9',
             'tamano'=>'60m²',
             'pvp'=>'80',
-            'imagen'=> '/img/room/dosBas2.jpg'
+            'imagen'=> '/img/room/dobBas2.jpg'
         ]);
 
         Room::create([
@@ -104,7 +104,7 @@ class RoomTableSeeder extends Seeder
             'n_habitacion'=>'10',
             'tamano'=>'80m²',
             'pvp'=>'190',
-            'imagen'=> '/img/room/dosBas3.jpg'
+            'imagen'=> '/img/room/dobBas3.jpg'
         ]);
 
         Room::create([

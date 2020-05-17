@@ -46,27 +46,25 @@
                                       </form>
                                   </div>
                               </li>
-              @endguest
-              
-                <form action="{{route('reserve.index')}}" id="capacidad" method="GET" name="search">
-                <div class="form-group">
-                <label for="capacidad" class="float-right col-md-8">Seleccione el tipo de habitación: </label>
-                <div class="input-group col-md-8 float-right" >
-                          <select class="form-control col-sm-6" name="capacidad" style="display: inline-block;">
-                            <option value="0"></option>
-                            <option value="1">Individual</option>
-                            <option value="2">Doble</option>
-                            <option value="3">Triple</option>
-                          </select>
-                          <span class="input-group-btn">        
-                <button type="submit" class="btn btn-outline-dark ml-2" style="display: inline-block;">Seleccionar</button>
-                          </span>
-                </div>
-
-            </div>
-              </form>
-             
+              @endguest  
       </ul>
+      <form action="{{route('reserve.index')}}"  method="GET" name="search">
+        <div class="form-group" id="capacidad">
+        <label for="capacidad" class="float-right col-md-8">Seleccione el tipo de habitación: </label>
+        <div class="input-group col-md-8 float-right" >
+                  <select class="form-control col-sm-6" name="capacidad" style="display: inline-block;">
+                    <option value="0"></option>
+                    <option value="1">Individual</option>
+                    <option value="2">Doble</option>
+                    <option value="3">Triple</option>
+                  </select>
+                  <span class="input-group-btn">        
+        <button type="submit" class="btn btn-outline-dark ml-2" style="display: inline-block;">Seleccionar</button>
+                  </span>
+        </div>
+
+    </div>
+      </form>
       <div id="toggle">
           <div class="span"><img src="{{asset('./img/home/iconMenu.png')}}" width="30" height="30"></div>
       </div>
@@ -77,8 +75,9 @@
   <div id="resize">
       <div id="close-btn"><img src="{{asset('./img/home/iconClose.png')}}" width="30" height="30"></div>
           <ul id="menu">
+            <li><a href="{{url('/')}}">Inicio</a></li>
               <li><a href="{{route('experience.index')}}">Experiencias</a></li>
-              <li><a href="">Reservas</a></li>
+              <li><a href="{{route('reserve.index')}}">Reservas</a></li>
               <li><a href="{{route('contact.index')}}">Contacto</a></li>
               @guest
                               
@@ -112,6 +111,7 @@
     <script>
         $( document ).ready(function() {
         $('#myModal').modal('toggle')
+        
     });
     </script>
     
@@ -134,7 +134,7 @@
                      <div class="add-prod wow fadeInUp" data-wow-delay="1.1s">
                         <form action="{{route('reserve.show', $item)}}">
                             <input type="hidden" name="id" value="{{$item->id}}">
-                         <button type="submit" class="btn btn-dark">Reservar</button>   
+                         <button type="submit" class="btn btn-dark" onclick="return confirm('Para poder reservar tiene que iniciar sesión. ¿Desea iniciar sesión o registrarse en la web?')">Reservar</button>   
                         </form>
                     </div>
                </div>
@@ -142,6 +142,7 @@
    </div>
 </div>
 
+@endforeach
 <!-- Modal -->
 <div class="modal fade" id="myModal" role="dialog">
     <div class="modal-dialog">
@@ -163,8 +164,4 @@
       
     </div>
   </div>
-  
-
-@endforeach
-
 @endsection

@@ -16,7 +16,7 @@ class CreateRoomsTable extends Migration
         Schema::create('rooms', function (Blueprint $table) {
             $table->id();
             $table->string('tipo');
-            $table->integer('capacidad')->unsigned();
+            $table->integer('capacidad')->unsigned()->nullable();
             $table->integer('n_habitacion')->unsigned();
             $table->string('tamano');
             $table->float('pvp', 7, 2);

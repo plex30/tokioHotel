@@ -81,7 +81,6 @@ class ReservaRequest extends FormRequest
     public function rules()
     {
         return [
-            'capacidad' => ['required'],
             'f_entrada' => ['required'],
             'f_salida' => ['required'],
             'num0'=>['nullable', 'not_in:0'],
@@ -95,8 +94,6 @@ class ReservaRequest extends FormRequest
 
     public function messages(){
         return [
-            'capacidad.required'=>'El número de personas es obligatorio.',
-            'capacidad.min:1'=>'Minimo tiene que seleccionar una persona.',
             'f_entrada.required'=>'La fecha de entrada es obligatoria.',
             'f_salida.required'=>'La fecha de salida es obligatoria.',
             'num0.not_in'=>'La fecha de entrada no puede ser inferior a la fecha actual',

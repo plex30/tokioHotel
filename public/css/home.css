@@ -176,7 +176,13 @@ nav #menu li a:hover{
     nav #menu{
         display: none;
     }
+    nav{
+        position: absolute;
+        opacity: 1;
+    }
 }
+
+
 
 @media(min-width: 768px){
     #resize {

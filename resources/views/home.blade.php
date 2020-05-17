@@ -78,7 +78,7 @@
     <div id="close-btn"><img src="{{asset('./img/home/iconClose.png')}}" width="30" height="30"></div>
         <ul id="menu">
             <li><a href="{{route('experience.index')}}">Experiencias</a></li>
-            <li><a href="">Reservas</a></li>
+            <li><a href="{{route('reserve.index')}}">Reservas</a></li>
             <li><a href="{{route('contact.index')}}">Contacto</a></li>
             @guest
                             

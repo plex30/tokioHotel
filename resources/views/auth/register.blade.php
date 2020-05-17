@@ -49,7 +49,7 @@ Tokio Hotel
 </div>
     <div class="limiter">
         <div class="container-login">
-            <div class="wrap-login">
+            <div class="wrap-login1">
             <form class="login-form" action="{{route('register')}}" method="POST">
                 @csrf
                 <span class="title">

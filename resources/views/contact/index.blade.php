@@ -20,7 +20,7 @@
             <ul id="menu">
                 <li><a href="{{url('/')}}">Inicio</a></li>
                 <li><a href="{{route('experience.index')}}">Experiencias</a></li>
-                <li><a href="">Reservas</a></li>
+                <li><a href="{{route('reserve.index')}}">Reservas</a></li>
                 @guest
                                 
                                 @if (Route::has('register'))
@@ -49,7 +49,11 @@
             </ul>
     </div>
     <div class="card">
+        <a href="" id="i1"><img src="{{'./img/contact/tw.png'}}" style="width: 25px; height:25px"></a>
+        <a href="" id="i2"><img src="{{'./img/contact/face.png'}}" style="width: 33px; height:30px"></a>
+        <a href="" id="i3"><img src="{{'./img/contact/ig.png'}}" style="width: 42px; height:28px"></a>
         <div class="card-img" id="img"></div>
+        
         <div class="card-content">
               <p class="card-theme wow fadeInUp" data-wow-delay="0.3s">Contacto</p>
               <h2 class="card-header wow fadeInRight" data-wow-delay="0.4s">Puede enviarnos un mensaje y nos pondremos en contacto con usted lo antes posible:</h2>

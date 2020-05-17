@@ -39,7 +39,8 @@
   <div id="close-btn"><img src="{{asset('./img/home/iconClose.png')}}" width="30" height="30"></div>
       <ul id="menu">
           <li><a href="{{url('/')}}">Inicio</a></li>
-          <li><a href="">Reservas</a></li>
+          <li><a href="{{route('experience.index')}}">Experiencias</a></li>
+          <li><a href="{{route('reserve.index')}}">Reservas</a></li>
           <li><a href="{{route('contact.index')}}">Contacto</a></li>
           @guest
                           
@@ -72,15 +73,12 @@
 @if ($errors->any())
 <script>
   $( document ).ready(function() {
-  /* $('#myModal').modal('toggle') */
+  $('#myModal').modal('toggle')
 
-  $('#myModal').on('hidden', function () {
-  if($(this).find('div .alert').length){
-      $(this).find('div .alert').remove();
-  }
-});
   
 });
+  
+
 </script>
 <div class="modal fade" id="myModal" role="dialog">
   <div class="modal-dialog">
@@ -109,15 +107,6 @@
   </div>
 </div>
 @endif
-
-
-{{-- <div class="alert alert-danger my-2" id="error">
-    <ul>
-        @foreach ($errors->all() as $error)
-            <li>{{ $error }}</li>
-        @endforeach
-    </ul>
-</div> --}}
 
             <div id="container">	
 	              <div class="product-details">
@@ -161,11 +150,11 @@
 
 
   </div>
-
-  <div id="container-no">	
-    <div class="product-image">
-      <img src="{{asset($room->imagen)}}"class="responsive" ></div>
+  <div class="product-image1">
+    <img src="{{asset($room->imagen)}}" class="responsive" style="width:400px; height:200px;"></div>
+  <div id="container-no">
     
+    	
       <h1>Habitación {{$room->tipo}}</h1>
       <ul>
         <li><i class="fa fa-arrows-alt"></i> 82m²</li>
@@ -175,8 +164,9 @@
         <li><i class="fa fa-wifi"></i> Wifi gratis</li>
         <li><i class="fa fa-volume-mute"></i> Insonorización</li>
       </ul>
+      <h2>Precio por noche: {{$room->pvp}}€</h2>
   </div>
-    <h2>Precio por noche: {{$room->pvp}}€</h2>
+    
     
 
 @endsection
