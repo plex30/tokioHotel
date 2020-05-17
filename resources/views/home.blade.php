@@ -48,7 +48,7 @@
                                 <a class="dropdown-item" href="{{ route('user.edit',Auth::user()) }}">
                                     {{ __('Editar mi perfil') }}
                                 </a>
-                                <a class="dropdown-item" href="{{ route('logout') }}">
+                                <a class="dropdown-item" href="{{ route('user.show',Auth::user()) }}">
                                     {{ __('Mis reservas') }}
                                 </a>
                                 <a class="dropdown-item" href="{{ route('logout') }}"

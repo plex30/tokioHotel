@@ -1,49 +1,81 @@
-@extends('layouts.layoutReserve')
+@extends('layouts.layoutUser')
+@section('title')
+Tokio Hotel
+@endsection
 @section('content')
-<form>
+<nav>
+  <div class="brand wow fadeInDown" id="brand">
+      <a href="{{url('/')}}"><img src="{{asset('./img/home/lg.png')}}" width="80" height="80"></a>
+      </div>
+      <div id="toggle">
+          <div class="span"><img src="{{asset('./img/home/iconMenu.png')}}" width="30" height="30"></div>
+  
+</nav>
+
+<div id="resize">
+  <div id="close-btn"><img src="{{asset('./img/home/iconClose.png')}}" width="30" height="30"></div>
+      <ul id="menu">
+          <li><a href="{{url('/')}}">Inicio</a></li>
+          <li><a href="{{route('experience.index')}}">Experiencias</a></li>
+          <li><a href="{{route('reserve.index')}}">Reservas</a></li>
+          <li><a href="{{route('contact.index')}}">Contacto</a></li>
+          @guest
+                          
+                          @if (Route::has('register'))
+                          <li><a href="{{ route('login') }}">{{ __('Iniciar Sesión') }}</a>
+                          </li>
+                          @endif
+                      @else
+                          <li class="nav-item dropdown">
+                              <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                  Bienvenido {{ Auth::user()->firstname }} <span class="caret"></span>
+                              </a>
+
+                              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                  <a class="dropdown-item" href="{{ route('logout') }}"
+                                     onclick="event.preventDefault();
+                                                   document.getElementById('logout-form').submit();">
+                                      {{ __('Cerrar Sesión') }}
+                                  </a>
+
+                                  <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                      @csrf
+                                  </form>
+                              </div>
+                          </li>
+          @endguest
+      </ul>
+</div>
+<div id="container">
+<h1>Hola {{$user->firstname}}, aquí puede modificar su perfil</h1>
+<form >
+    <div class="form-row mt-5">
+      <div class="form-group col-md-6">
+        <label for="firstname">Nombre</label>
+        <input type="text" class="form-control" name="firstname"  value="{{$user->firstname}}">
+      </div>
+      <div class="form-group col-md-6">
+        <label for="lastname">Apellidos</label>
+        <input type="text" class="form-control" name="lastname" value="{{$user->lastname}}">
+      </div>
+    </div>
     <div class="form-row">
-      <div class="form-group col-md-6">
-        <label for="inputEmail4">Email</label>
-        <input type="email" class="form-control" id="inputEmail4"  value="{{$user->email}}">
-      </div>
-      <div class="form-group col-md-6">
-        <label for="inputPassword4">Password</label>
-        <input type="password" class="form-control" id="inputPassword4" value="{{$user->password}}">
-      </div>
+    <div class="form-group col-md-6">
+      <label for="inputAddress">Teléfono</label>
+      <input type="text" class="form-control" name="phone" value="{{$user->phone}}">
     </div>
-    <div class="form-group">
-      <label for="inputAddress">Address</label>
-      <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+    <div class="form-group col-md-6 ">
+      <label for="inputAddress2 ">E-mail</label>
+      <input type="email" class="form-control" name="email" value="{{$user->email}}">
     </div>
-    <div class="form-group">
-      <label for="inputAddress2">Address 2</label>
-      <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
-    </div>
+  </div>
     <div class="form-row">
-      <div class="form-group col-md-6">
-        <label for="inputCity">City</label>
-        <input type="text" class="form-control" id="inputCity">
-      </div>
       <div class="form-group col-md-4">
-        <label for="inputState">State</label>
-        <select id="inputState" class="form-control">
-          <option selected>Choose...</option>
-          <option>...</option>
-        </select>
-      </div>
-      <div class="form-group col-md-2">
-        <label for="inputZip">Zip</label>
-        <input type="text" class="form-control" id="inputZip">
+        <label for="password">Nueva Contraseña</label>
+        <input type="password" class="form-control" name="password">
       </div>
     </div>
-    <div class="form-group">
-      <div class="form-check">
-        <input class="form-check-input" type="checkbox" id="gridCheck">
-        <label class="form-check-label" for="gridCheck">
-          Check me out
-        </label>
-      </div>
-    </div>
-    <button type="submit" class="btn btn-primary">Sign in</button>
+    <button type="submit" class="btn btn-dark">Actualizar</button>
   </form>
+</div>
 @endsection
