@@ -368,9 +368,15 @@ nav #brand a:hover{
     }
     
   }
+  .invalid-feedback{
+    position: absolute;
+    color: red;
+    width: 300px;
+    margin-top: 95px;
+    font-size: 12px;
+  }
   
-  
-  .invalid-feedback {
+  /* .invalid-feedback {
     position: relative;
   }
   
@@ -427,7 +433,7 @@ nav #brand a:hover{
   .invalid-feedback:hover:before {
     visibility: visible;
     opacity: 1;
-  }
+  } */
   
   @media (max-width: 992px) {
     .invalid-feedback::before {

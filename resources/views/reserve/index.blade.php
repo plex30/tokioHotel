@@ -22,30 +22,46 @@
                               </li>
                               @endif
                           @else
-                              <li class="nav-item dropdown">
-                                  <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                      Bienvenido {{ Auth::user()->firstname }} <span class="caret"></span>
-                                  </a>
-  
-                                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                      
-                                      <a class="dropdown-item" href="{{ route('logout') }}">
-                                          {{ __('Editar mi perfil') }}
-                                      </a>
-                                      <a class="dropdown-item" href="{{ route('logout') }}">
-                                          {{ __('Mis reservas') }}
-                                      </a>
-                                      <a class="dropdown-item" href="{{ route('logout') }}"
-                                         onclick="event.preventDefault();
-                                                       document.getElementById('logout-form').submit();">
-                                          {{ __('Cerrar Sesión') }}
-                                      </a>
-  
-                                      <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                          @csrf
-                                      </form>
-                                  </div>
-                              </li>
+                          <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                Bienvenido {{ Auth::user()->firstname }} <span class="caret"></span>
+                            </a>
+                            
+                            @if (Auth::user()->firstname == 'Admin')
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="{{ route('admin.indexCli')}}">
+                                    {{ __('Panel de Administración') }}
+                                </a>
+                                <a class="dropdown-item" href="{{ route('logout') }}"
+                                   onclick="event.preventDefault();
+                                                 document.getElementById('logout-form').submit();">
+                                    {{ __('Cerrar Sesión') }}
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                        @csrf
+                                    </form>
+                                </div>
+                            </a> 
+                            @else
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="{{ route('user.edit',Auth::user()) }}">
+                                    {{ __('Editar mi perfil') }}
+                                </a>
+                                <a class="dropdown-item" href="{{ route('user.show',Auth::user()) }}">
+                                    {{ __('Mis reservas') }}
+                                </a>
+                                <a class="dropdown-item" href="{{ route('logout') }}"
+                                   onclick="event.preventDefault();
+                                                 document.getElementById('logout-form').submit();">
+                                    {{ __('Cerrar Sesión') }}
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                        @csrf
+                                    </form>
+                                </div>
+                                </a>
+                            @endif
+
+                                    
+                            </li>
               @endguest  
       </ul>
       <form action="{{route('reserve.index')}}"  method="GET" name="search">
@@ -86,23 +102,46 @@
                               </li>
                               @endif
                           @else
-                              <li class="nav-item dropdown">
-                                  <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                      Bienvenido {{ Auth::user()->firstname }} <span class="caret"></span>
-                                  </a>
-  
-                                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                      <a class="dropdown-item" href="{{ route('logout') }}"
-                                         onclick="event.preventDefault();
-                                                       document.getElementById('logout-form').submit();">
-                                          {{ __('Cerrar Sesión') }}
-                                      </a>
-  
-                                      <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                          @csrf
-                                      </form>
-                                  </div>
-                              </li>
+                          <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                Bienvenido {{ Auth::user()->firstname }} <span class="caret"></span>
+                            </a>
+                            
+                            @if (Auth::user()->firstname == 'Admin')
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="{{ route('admin.indexCli')}}">
+                                    {{ __('Panel de Administración') }}
+                                </a>
+                                <a class="dropdown-item" href="{{ route('logout') }}"
+                                   onclick="event.preventDefault();
+                                                 document.getElementById('logout-form').submit();">
+                                    {{ __('Cerrar Sesión') }}
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                        @csrf
+                                    </form>
+                                </div>
+                            </a> 
+                            @else
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="{{ route('user.edit',Auth::user()) }}">
+                                    {{ __('Editar mi perfil') }}
+                                </a>
+                                <a class="dropdown-item" href="{{ route('user.show',Auth::user()) }}">
+                                    {{ __('Mis reservas') }}
+                                </a>
+                                <a class="dropdown-item" href="{{ route('logout') }}"
+                                   onclick="event.preventDefault();
+                                                 document.getElementById('logout-form').submit();">
+                                    {{ __('Cerrar Sesión') }}
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                        @csrf
+                                    </form>
+                                </div>
+                                </a>
+                            @endif
+
+                                    
+                            </li>
               @endguest
           </ul>
   </div>
@@ -134,7 +173,14 @@
                      <div class="add-prod wow fadeInUp" data-wow-delay="1.1s">
                         <form action="{{route('reserve.show', $item)}}">
                             <input type="hidden" name="id" value="{{$item->id}}">
-                         <button type="submit" class="btn btn-dark" onclick="return confirm('Para poder reservar tiene que iniciar sesión. ¿Desea iniciar sesión o registrarse en la web?')">Reservar</button>   
+                            @if(!Auth::guest())
+                            <button type="submit" class="btn btn-dark">Reservar</button>
+                            @else
+                            <script>
+                                alert('Para poder reservar tiene que iniciar sesión, si no tiene cuenta puede crearse una en 2 minutos.')
+                            </script>
+                            @endif
+                            
                         </form>
                     </div>
                </div>

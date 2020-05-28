@@ -53,18 +53,27 @@ Tokio Hotel
             <div class="wrap-login">
             <form class="login-form" action="{{route('login')}}" method="POST">
                 @csrf
+                <div class="invalid-feedback">
+                    @error('email')
+                            <span class="invalid-feedback" role="alert">
+                                <p>{{ $message }}</p>
+                            </span>
+                    @enderror
+                    @error('password')
+                            <span class="invalid-feedback" role="alert">
+                                <p>{{ $message }}</p>
+                            </span>
+                    @enderror
+                </div>
                 <span class="title">
+                    
                  <h2>Bienvenido</h2>
                  <p>Puede iniciar sesión con su cuenta para acceder a nuestros servicios</p>
                 </span>
                 <div class="form-group row">
                     <div class="wrap-input col-md-6">
                         <input class="input" type="email" placeholder="E-mail" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
-                        @error('email')
-                            <span class="invalid-feedback" role="alert">
-                                <strong>{{ $message }}</strong>
-                            </span>
-                        @enderror
+                        
                     </div>
                 </div>
 
@@ -73,11 +82,7 @@ Tokio Hotel
                     <div class="wrap-input col-md-6">
                         <input class="input" type="password" placeholder="Contraseña" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
 
-                        @error('password')
-                            <span class="invalid-feedback" role="alert">
-                                <strong>{{ $message }}</strong>
-                            </span>
-                        @enderror
+                        
                     </div>
                 </div>
 

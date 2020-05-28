@@ -46,9 +46,9 @@ Tokio Hotel
             @endguest
         </ul>
   </div>
-<div class="container-show">
-    <h1 class="text_align">Mis Reservas</h1>
-  <table class="table table-hover">
+<div class="container-show1">
+    <h1>Mis Reservas</h1>
+  <table class="table table-hover table-sm">
     <thead class="thead-dark">
       <tr>
         <th scope="col">Código de reserva</th>

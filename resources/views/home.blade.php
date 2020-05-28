@@ -25,13 +25,13 @@
                             @endif
                         @else
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                Bienvenido {{ Auth::user()->firstname }} <span class="caret"></span>
+                            <a class="nav-link dropdown-toggle" href="#"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Bienvenido/a &nbsp; {{ Auth::user()->firstname }} <span class="caret"></span>
                             </a>
-                            
-                            @if (auth()->id() == '2')
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="{{ route('user.edit',Auth::user()) }}">
+ 
+                            @if (Auth::user()->firstname == 'Admin')
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <a class="dropdown-item" href="{{ route('admin.indexCli')}}">
                                     {{ __('Panel de Administración') }}
                                 </a>
                                 <a class="dropdown-item" href="{{ route('logout') }}"
@@ -41,10 +41,10 @@
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                         @csrf
                                     </form>
-                                </div>
+                            </div>
                             </a> 
                             @else
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                                 <a class="dropdown-item" href="{{ route('user.edit',Auth::user()) }}">
                                     {{ __('Editar mi perfil') }}
                                 </a>
@@ -87,37 +87,45 @@
                             </li>
                             @endif
                         @else
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    Bienvenido {{ Auth::user()->firstname }} <span class="caret"></span>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Bienvenido/a {{ Auth::user()->firstname }} <span class="caret"></span>
+                            </a>
+                            
+                            @if (Auth::user()->firstname == 'Admin')
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <a class="dropdown-item" href="{{ route('admin.indexCli')}}">
+                                    {{ __('Panel de Administración') }}
                                 </a>
-                                
-                                @if (auth()->id() == '2')
                                 <a class="dropdown-item" href="{{ route('logout') }}"
-                                onclick="event.preventDefault();
-                                              document.getElementById('logout-form').submit();">
-                                 {{ __('Cerrar Sesión') }}
-                                </a> 
-                                @else
-                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('logout') }}">
-                                        {{ __('Editar mi perfil') }}
-                                    </a>
-                                    <a class="dropdown-item" href="{{ route('logout') }}">
-                                        {{ __('Mis reservas') }}
-                                    </a>
-                                    <a class="dropdown-item" href="{{ route('logout') }}"
-                                       onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                        {{ __('Cerrar Sesión') }}
-                                    </a>
-                                @endif
-                                
-
+                                   onclick="event.preventDefault();
+                                                 document.getElementById('logout-form').submit();">
+                                    {{ __('Cerrar Sesión') }}
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                         @csrf
                                     </form>
                                 </div>
+                            </a> 
+                            @else
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <a class="dropdown-item" href="{{ route('user.edit',Auth::user()) }}">
+                                    {{ __('Editar mi perfil') }}
+                                </a>
+                                <a class="dropdown-item" href="{{ route('user.show',Auth::user()) }}">
+                                    {{ __('Mis reservas') }}
+                                </a>
+                                <a class="dropdown-item" href="{{ route('logout') }}"
+                                   onclick="event.preventDefault();
+                                                 document.getElementById('logout-form').submit();">
+                                    {{ __('Cerrar Sesión') }}
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                        @csrf
+                                    </form>
+                                </div>
+                                </a>
+                            @endif
+
+                                    
                             </li>
             @endguest
         </ul>
@@ -125,7 +133,15 @@
     <section class="contain">
         <div class="hero"></div>
     </section>
+    @if(Session::get('message'))
+    <script>
+        $( document ).ready(function() {
+        $('#myModal').modal('toggle')
+        
+    });
+    </script>
     
+      @endif
 
     <div class="container-fluid">
         <br><br><br>
@@ -261,6 +277,26 @@
     </div>
 
 </div>
-
+<!-- Modal -->
+<div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+            <h4 class="modal-title">¡Datos Actualizados!</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          
+        </div>
+        <div class="modal-body">
+          <p>{{Session::get('message')}}</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Tokio Hotel</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
 
 @endsection

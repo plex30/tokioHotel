@@ -24,6 +24,18 @@ Route::get('experience', 'ExperienceController@index')->name('experience.index')
 Route::get('contact', 'ContactController@index')->name('contact.index');
 Route::resource('reserve', 'ReserveController');
 Route::resource('user', 'UserController');
+Route::get('admin/cliente', 'AdminController@indexCli')->name('admin.indexCli');
+Route::get('admin/room', 'AdminController@indexRoom')->name('admin.indexRoom');
+Route::get('admin/reserva', 'AdminController@indexRev')->name('admin.indexRev');
+Route::get('admin/{user}/edit', 'AdminController@editCli')->name('admin.editCli');
+Route::get('admin/room/{room}/edit', 'AdminController@editRoom')->name('admin.editRoom');
+Route::get('admin/reserve/{uroom}/edit', 'AdminController@editRev')->name('admin.editRev');
+Route::delete('admin/cliente/{user}', 'AdminController@destroyCli')->name('admin.destroyCli');
+Route::delete('admin/room/{room}', 'AdminController@destroyRoom')->name('admin.destroyRoom');
+Route::delete('admin/reserva/{uroom}', 'AdminController@destroyRev')->name('admin.destroyRev');
+Route::put('admin/cliente/{user}', 'AdminController@updateCli')->name('admin.updateCli');
+Route::put('admin/room/{room}', 'AdminController@updateRoom')->name('admin.updateRoom');
+Route::put('admin/reserva/{uroom}', 'AdminController@updateRev')->name('admin.updateRev');
 /* Route::get('reserve', 'ReserveController@index')->name('reserve.index'); */
 /* Route::post('reserve/show/{id}', 'ReserveController@showReserva')->name('reserve.show'); */ 
 Route::post('reserve', 'ReserveController@reserva')->name('reserve.reserva');

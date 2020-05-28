@@ -8,6 +8,11 @@ use Illuminate\Http\Request;
 
 class UserController extends Controller
 {
+
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
     
     public function show(User $user){
        
@@ -18,8 +23,10 @@ class UserController extends Controller
         return view('user.edit', compact('user'));
     }
     
-    public function update(){
-
+    public function update(Request $request, User $user){
+        $user->update($request->all());
+        
+        return redirect()->route('home')->with('message', 'Sus datos se han actualizado correctamente, gracias por usar nuestros servicios.');
     }
 
 

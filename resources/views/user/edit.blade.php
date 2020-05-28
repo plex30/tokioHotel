@@ -48,33 +48,30 @@ Tokio Hotel
 </div>
 <div id="container">
 <h1>Hola {{$user->firstname}}, aquí puede modificar su perfil</h1>
-<form >
+<form name="edit" method="POST" action="{{route('user.update', $user)}}" enctype="multipart/form-data">
+  @csrf
+  @method('PUT')
     <div class="form-row mt-5">
       <div class="form-group col-md-6">
         <label for="firstname">Nombre</label>
-        <input type="text" class="form-control" name="firstname"  value="{{$user->firstname}}">
+        <input type="text" class="form-control" name="firstname"  value="{{$user->firstname}}"required>
       </div>
       <div class="form-group col-md-6">
         <label for="lastname">Apellidos</label>
-        <input type="text" class="form-control" name="lastname" value="{{$user->lastname}}">
+        <input type="text" class="form-control" name="lastname" value="{{$user->lastname}}"required>
       </div>
     </div>
     <div class="form-row">
     <div class="form-group col-md-6">
       <label for="inputAddress">Teléfono</label>
-      <input type="text" class="form-control" name="phone" value="{{$user->phone}}">
+      <input type="text" class="form-control" name="phone" value="{{$user->phone}}"required>
     </div>
     <div class="form-group col-md-6 ">
       <label for="inputAddress2 ">E-mail</label>
-      <input type="email" class="form-control" name="email" value="{{$user->email}}">
+      <input type="email" class="form-control" name="email" value="{{$user->email}}" required>
     </div>
   </div>
-    <div class="form-row">
-      <div class="form-group col-md-4">
-        <label for="password">Nueva Contraseña</label>
-        <input type="password" class="form-control" name="password">
-      </div>
-    </div>
+
     <button type="submit" class="btn btn-dark">Actualizar</button>
   </form>
 </div>

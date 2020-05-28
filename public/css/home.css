@@ -182,7 +182,10 @@ nav #menu li a:hover{
     }
 }
 
-
+.nav-link{
+    margin-top: -10px;
+    margin-left: -15px;
+}
 
 @media(min-width: 768px){
     #resize {
