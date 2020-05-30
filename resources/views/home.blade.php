@@ -167,36 +167,43 @@
 
         <div class="whitespace"></div>
 
-        <div id="carousel" class="carousel slide" data-ride="carousel">
+        <div id="carouselIndicators" class="carousel slide" data-ride="carousel">
             <ol class="carousel-indicators">
               <li data-target="#carouselIndicators" data-slide-to="0" class="active"></li>
               <li data-target="#carouselIndicators" data-slide-to="1"></li>
               <li data-target="#carouselIndicators" data-slide-to="2"></li>
+              <li data-target="#carouselIndicators" data-slide-to="3"></li>
+              <li data-target="#carouselIndicators" data-slide-to="4"></li>
+              <li data-target="#carouselIndicators" data-slide-to="5"></li>
             </ol>
             <div class="carousel-inner">
               <div class="carousel-item active">
-              <img class="d-block w-100 img-circle" src="./img/home/slide1.jpg" alt="First slide">
+              <img class="d-block w-100 img-circle" src="{{asset('./img/home/slide1.jpg')}}" alt="First slide">
               </div>
               <div class="carousel-item">
-                <img class="d-block w-100 img-circle" src="./img/home/slide2.jpg" alt="Second slide">
+                <img class="d-block w-100 img-circle" src="{{asset('./img/home/slide5.jpg')}}" alt="Second slide">
               </div>
               <div class="carousel-item">
-                <img class="d-block w-100 img-circle" src="./img/home/slide3.jpg" alt="Third slide">
+                <img class="d-block w-100 img-circle" src="{{asset('./img/home/slide3.jpg')}}" alt="Third slide">
+              </div>
+              <div class="carousel-item">
+                <img class="d-block w-100 img-circle" src="{{asset('./img/home/slide4.jpg')}}" alt="Third slide">
+              </div>
+              <div class="carousel-item">
+                <img class="d-block w-100 img-circle" src="{{asset('./img/home/slide2.jpg')}}" alt="Third slide">
+              </div>
+              <div class="carousel-item">
+                <img class="d-block w-100 img-circle" src="{{asset('./img/home/slide6.jpg')}}" alt="Third slide">
               </div>
             </div>
-            <a class="carousel-control-prev" href="#carouselIndicators" role="button" data-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#carouselIndicators" role="button" data-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="sr-only">Next</span>
-            </a>
+            
           </div>
             <br>
         <div class="whitespace"></div>
         <div class="row">
-            <div class="col-lg-8"></div>
+            <div class="col-lg-8 wow fadeInLeft" id="txt1">
+                Nuestras habitaciones cuentan con camas dobles, suelo de tatami y sofás con marcos de ciprés ornamentados.<br> Cada una es un estancia contemporánea decorada con artesanía tradicional japonesa.<br> Los huéspedes pueden relajarse sumergiéndose en la bañera profunda ubicada en el baño, que también está provisto con un lavabo y una cabina de ducha.<br>Además disfrutando de la cálida luz del sol que se filtra a través de las pantallas de papel shoji que adornan las ventanas de la sala de estar.
+            </div>
             <div class="col-lg-4 photo photo1 wow fadeInRight"></div>
 
         </div>
@@ -204,12 +211,12 @@
         <div class="whitespace"></div>
         <div class="row">
             <div class="col-lg-4 photo photo2 wow fadeInLeft"></div>
-            <div class="col-lg-6"></div>
+            <div class="col-lg-8 wow fadeInRight" id="txt2">Cuando te pones el kimono que te han dejado en la habitación, notas el silencio.<br> Es un silencio elegante que impregna el ryokan, acentuando los detalles, como las sombras estéticas que se forman en el suelo de tatami a medida que la luz del sol atraviesa el entramado con diseño de komon que cubre el edificio.<br> Cada elemento estimula los sentidos, animándote a aventurarte a recorrer el hotel mientras vistes tu kimono.</div>
         </div>
 
         <div class="whitespace"></div>
         <div class="row">
-            <div class="col-lg-8"></div>
+            <div class="col-lg-8 wow fadeInLeft" id="txt1">Desde el momento que entras en el ryokan, te sumerges en un mundo diferente.<br> Es un mundo donde uno está constantemente envuelto en el aroma de sándalo entretejido en el tatami,<br>donde se recuerda la belleza de las estaciones a través de espectaculares arreglos florales.<br> La iluminación suave, los kimonos suaves y la ropa de cama de felpa inducen la relajación, mientras que las conversaciones en el ochanoma y la comida elaborada en torno a manjares menos conocidos de la cocina japonesa proporcionan una estimulación jamás experimentada.</div>
             <div class="col-lg-4 photo photo3 wow fadeInRight"></div>
             <div class="col-lg-3"></div>
         </div>
@@ -218,7 +225,7 @@
         <div class="row">
             
             <div class="col-lg-4 photo photo4 wow fadeInLeft"></div>
-            <div class="col-lg-6"></div>
+            <div class="col-lg-8 wow fadeInRight" id="txt2">Te puedes sumergir en un baño termal cubierto. Las densas aguas salinas tienen un efecto energizante.<br> Sientes una profunda vitalidad recorriendo tu cuerpo. Un túnel se aleja del baño; lo atraviesas y sales al baño al aire libre. Una suave brisa nocturna sopla a través del techo abierto.<br> Miras al cielo y contemplas la oscuridad de la noche, casi intachable por el resplandor de las luces de la gran ciudad.</div>
         </div>
     </div>
         <div class="whitespace"></div>

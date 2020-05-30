@@ -1,6 +1,6 @@
 
 window.onload = function () {
- 
+  $('#carousel').carousel();
   document.getElementById('toggle').addEventListener('click', changeMenu)
   document.getElementById('close-btn').addEventListener('click', changeMenu)
   

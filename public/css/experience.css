@@ -120,14 +120,14 @@ nav #brand a:hover{
  @media(max-width: 768px){
      #toggle{
          margin-top: 6px;
-         margin-right: 4px;
+         margin-right: 124px;
      }
      #close-btn{
          top: 12px;
-         right: 35px;
+         right: 155px;
      }
      #resize #menu li{
-         margin-left: -3px;
+         margin-left: -93px;
          font-size: 20px;
          font-weight: lighter;
      }
@@ -136,6 +136,27 @@ nav #brand a:hover{
      }
      
  }
+
+ @media(max-width: 768px) and (orientation:landscape){
+    #toggle{
+        margin-top: 6px;
+        margin-right: 4px;
+    }
+    #close-btn{
+        top: 12px;
+        right: 35px;
+    }
+    #resize #menu li{
+        margin-top: 15px;
+        margin-left: -3px;
+        font-size: 20px;
+        font-weight: lighter;
+    }
+    #resize li span{
+        font-weight: bolder;
+    }
+    
+}
  
 .slide {
     display: flex;
@@ -193,7 +214,40 @@ nav #brand a:hover{
     .card-content{
         margin-top: 80px;
     }
+
+    .card-theme{
+        font-size: 30px;
+    }
+
+    .card-header{
+        font-size: 19px;
+    }
+
+    .card-para{
+        font-size: 10px;
+    }
+
+    
 }
+
+@media(max-width: 768px) and (orientation:landscape){
+    .card-content{
+        margin-top: 23px;
+        
+    }
+    .card-theme{
+        font-size: 10px;
+    }
+
+    .card-header{
+        font-size: 29px;
+    }
+
+    .card-para{
+        font-size: 10px;
+    }
+
+}   
 
 .card-theme {
     font-size: 1.7vmin;
@@ -214,15 +268,11 @@ nav #brand a:hover{
     font-family: "Quicksand" !important;
 }
 
-@media(max-width: 768px){
 
-    .card-header{
-        font-size: 39px;
-    }
-}
+
 
 .card-para {
-    font-size: 1.8vmin;
+    font-size: 15px;
     line-height: 1.8;
     margin-bottom: 2.5vmin;
     color:#000;

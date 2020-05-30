@@ -86,18 +86,6 @@ Tokio Hotel
                     </div>
                 </div>
 
-                <div class="form-group row">
-                    <div class="col-md-6 offset-md-4">
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
-
-                            <label class="remember" for="remember">
-                                {{ __('Recordar') }}
-                            </label>
-                        </div>
-                    </div>
-                </div>
-
                 <div class="container-login-form-btn">
                     <div class="wrap-login-form-btn">
                         <div class="login-form-bgbtn"></div>
@@ -111,9 +99,17 @@ Tokio Hotel
                     <span class="txt1">
                     No está registrado?
                     </span>
-                <a class="txt2" href="{{route('register')}}">Registrese</a>
+                <a class="txt2" href="{{route('register')}}">Registrese Aquí.</a>
                 </div>
-
+                <div class="form-group row">
+                    <div class="col-md-6 offset-md-4">
+                        @if (Route::has('password.request'))
+                                    <a class="txt2 btn btn-link" href="{{ route('password.request') }}">
+                                        {{ __('Forgot Your Password?') }}
+                                    </a>
+                        @endif
+                    </div>
+                </div>
                 </form>
             </div>
         </div>
