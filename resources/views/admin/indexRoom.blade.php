@@ -23,7 +23,7 @@ Tokio Hotel
     <p class='alert-success ml-5 mr-5 mt-2'>{{$mens}}</p>
   @endif
   <div class="container-show">
-  <table class="table table-sm table-hover mt-3">
+  <table class="table responsive table-sm table-hover mt-3">
     <thead class="thead-dark">
       <tr>
         <th scope="col">ID</th> 
@@ -61,6 +61,7 @@ Tokio Hotel
     </tbody>
     @endforeach
   </table>
-</div>
   {{$room->appends(Request::except('page'))->links()}}
+</div>
+  
 @endsection

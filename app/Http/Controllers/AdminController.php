@@ -31,7 +31,7 @@ class AdminController extends Controller
 
 
     public function indexRev(){
-        $uroom = UserRoom::all();
+        $uroom = UserRoom::orderBy('id')->paginate(10);
         return view('admin.indexRev', compact('uroom'));
     }
 

@@ -17,7 +17,7 @@ body{
     height: 100px;
 }
 
-@media (max-width: 768px){
+@media (max-width: 815px){
     .whitespace{
         display: none;
     }
@@ -96,7 +96,7 @@ nav #menu li a:hover{
 
 #close-btn{
     position: absolute;
-    right: 35px;
+    right: 48px;
     z-index: 2;
     cursor: pointer;
     top: -2px;
@@ -118,7 +118,7 @@ nav #menu li a:hover{
 #resize #menu{
     height: 90px;
     position: absolute;
-    left: 45%;
+    left: 41%;
     transform: translateX(-40%);
     text-align: center;
     display: table-cell;
@@ -142,6 +142,7 @@ nav #menu li a:hover{
 
 #resize #menu li a{
     color:#000;
+   
 }
 
 #resize #menu li a:hover{
@@ -153,13 +154,14 @@ nav #menu li a:hover{
     opacity: 1;
 }
 
-@media(max-width: 768px){
+@media(max-width: 815px){
     #toggle{
         visibility: visible;
         opacity: 1;
         margin-top: 6px;
         margin-right: 4px;
     }
+
     nav #brand{
         margin-left: 24px;
     }
@@ -182,12 +184,23 @@ nav #menu li a:hover{
     }
 }
 
+@media(max-width: 815px) and (orientation:landscape){
+    
+    #resize #menu{
+        left: 44%;
+    }
+    #resize #menu li{
+        margin-top: -5px;
+        
+    }
+}
+
 .nav-link{
     margin-top: -10px;
     margin-left: -15px;
 }
 
-@media(min-width: 768px){
+@media(min-width: 815px){
     #resize {
         visibility: hidden !important;
     }
@@ -207,7 +220,7 @@ nav #menu li a:hover{
     height: 100vh;
 }
 
-@media(max-width: 768px){
+@media(max-width: 815px){
     .contain{
         height: 180px;
     }
@@ -219,7 +232,7 @@ nav #menu li a:hover{
 }
 
 
-@media(max-width: 768px){
+@media(max-width: 815px){
     .header h1{
         font-size: 26px;
 }
@@ -264,7 +277,7 @@ h6{
     
 }
 
-/* @media(max-width: 768px){
+/* @media(max-width: 815px){
     .carousel-item{
         width: 330px;
         height: 200px;
@@ -354,7 +367,7 @@ h6{
     bottom: 0;
 }
 
-@media(max-width: 768px){
+@media(max-width: 815px){
     .photo{
         width: 90% !important;
         margin: 14px auto;
@@ -415,7 +428,7 @@ font-weight: lighter;
     display: inline-block;
 }
 
-@media(max-width: 768px){
+@media(max-width: 815px){
     .collab, #personal, #media, #address{
         text-align: center;
     }
@@ -445,7 +458,7 @@ font-weight: lighter;
     text-align: center;
 }
 
-@media(max-width: 768px){
+@media(max-width: 815px){
     #txt1, #txt2{
         display: none;
     }

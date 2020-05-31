@@ -23,7 +23,7 @@ Tokio Hotel
     <p class='alert-success ml-5 mr-5 mt-3'>{{$mens}}</p>
   @endif
   <div class="container-show">
-  <table class="table table-sm table-hover mt-3">
+  <table class="table responsive table-sm table-hover mt-3">
     <thead class="thead-dark">
       <tr>
         <th scope="col">Código de reserva</th>
@@ -59,6 +59,7 @@ Tokio Hotel
     </tbody>
     @endforeach
   </table>
+  {{$uroom->appends(Request::except('page'))->links()}}
 </div>
-  {{-- {{$room->appends(Request::except('page'))->links()}} --}}
+  
 @endsection

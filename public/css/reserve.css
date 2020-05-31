@@ -105,7 +105,8 @@ nav #menu li a:hover{
 #resize #menu{
     height: 90px;
     position: absolute;
-    left: 45%;
+    left: 41%;
+    top:-1%;
     transform: translateX(-40%);
     text-align: center;
     display: table-cell;
@@ -115,7 +116,7 @@ nav #menu li a:hover{
 #resize #menu li{
     display: block;
     text-align: center;
-    padding: 10px 0;
+    padding: -3px 0;
     font-size: 50px;
     min-height: 50px;
     font-weight: bold;
@@ -140,7 +141,7 @@ nav #menu li a:hover{
     opacity: 1;
 }
 
-@media(max-width: 768px){
+@media(max-width: 815px){
     #toggle{
         visibility: visible;
         opacity: 1;
@@ -168,9 +169,16 @@ nav #menu li a:hover{
     }
 }
 
-@media(min-width: 768px){
+@media(min-width: 815px){
     #resize {
         visibility: hidden !important;
+    }
+}
+
+@media(max-width: 815px) and (orientation:landscape){
+    #resize #menu{
+        top: -40%;
+        left: 44%;
     }
 }
 
@@ -183,21 +191,6 @@ nav #menu li a:hover{
 
 img {
     width: 100%;
-}
-
-
-@media(max-width: 768px) {
-    .hero-image {
-        padding-top: 100px;
-        padding-right: 23px;
-        width: 350px;
-    }
-
-    .product-sec {
-        margin-top: 10px;
-        margin-left: 1px;
-        margin-bottom: 10px;
-   }
 }
 
 
@@ -244,30 +237,51 @@ img {
     
 }
 
-@media(max-width: 768px) {
+@media(max-width: 815px) {
+    .hero-image {
+        padding-top: 100px;
+        padding-right: 23px;
+        width: 350px;
+    }
+
+    .product-sec {
+        margin-top: 10px;
+        margin-left: 1px;
+        margin-bottom: 10px;
+   }
+
+   #capacidad{
+    margin-top: 80px;
+    position: absolute;
+    
+}
+}
+    
+
+@media(max-width: 815px) and (orientation:landscape){
     #capacidad{
         margin-top: 80px;
-        position: absolute;
+      
         
     }
-}
+    .hero-image {
+        margin-top: -20px;
+        padding-right: 23px;
+        width: 350px;
+    }
 
-.simplescrollup__button {
-    position: fixed;
-    bottom: 3rem;
-    right: 3rem;
-    transition: 1s all;
-    z-index: 10000;
-}
-.simplescrollup__button--show {
-    transform: translateX(0);
-}
-.simplescrollup__button--hide {
-    transform: translateX(100px);
-}
+    .prod-opt {
+        padding-top: -40px;
+        border: none;
+        margin-left: 1px;
+   }
 
-
-
+   .product-sec {
+    height: 800px;
+    margin-top: 10px;
+    margin-left: 1px;
+}
+}
 
 
 

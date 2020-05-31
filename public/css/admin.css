@@ -8,7 +8,7 @@ html, body {
   }
 
   #container{
-    position: absolute;
+  position: absolute;
     margin-top: 60px;
     margin-left: 360px;
 }
@@ -22,11 +22,24 @@ html, body {
   .container-show{
      width: 80%;
      height: 50%;
-     position: fixed;
      margin-left: 150px;
      margin-right: 130px;
   }
 
   .label{
       margin-left: 20px;
+  }
+
+  @media(max-width: 815px){
+    .container-show{
+      text-align: center;
+      margin-left:40px;
+    }
+  }
+
+  @media(max-width: 815px) and (orientation:landscape){
+    .container-show{
+      text-align: center;
+      margin-left:70px;
+    }
   }

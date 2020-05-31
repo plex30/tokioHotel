@@ -12,6 +12,6 @@ return [
     |
     */
 
-    'failed'   => 'La cuenta o la contraseña es incorrecta. Si no recuerdas la cuenta, puede restablecerla ahora.',
+    'failed'   => 'Cuenta o contraseña incorrecta. Si no recuerda la contraseña, puede restablecerla ahora.',
     'throttle' => 'Demasiados intentos de acceso. Por favor intente nuevamente en :seconds segundos.',
 ];

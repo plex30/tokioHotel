@@ -55,7 +55,7 @@ nav #brand a:hover{
      right: 47px;
      z-index: 2;
      cursor: pointer;
-     top: 88px;
+     top: 80px;
      line-height: 80px;
  }
  
@@ -86,12 +86,14 @@ nav #brand a:hover{
      text-align: center;
      padding: 10px 0px;
      margin-left: 50px;
-     font-size: 50px;
+     font-size: 35px;
      min-height: 50px;
-     font-weight: bold;
+     font-weight: lighter;
      cursor: pointer;
      transition: all 0.3s ease-out;
  }
+
+ 
  
  #resize li:nth-child(1) {
      margin-top: 140px;
@@ -101,9 +103,12 @@ nav #brand a:hover{
      text-decoration: none;
      color:#000;
  }
+
+
  
  #resize #menu li a:hover{
      text-decoration: none;
+     color: grey;
  }
  
  #resize.active{
@@ -117,25 +122,55 @@ nav #brand a:hover{
  }
 
  
- @media(max-width: 768px){
+ @media(max-width: 815px){
      #toggle{
          margin-top: 6px;
-         margin-right: 4px;
+         margin-right: -14px;
+         position: absolute;
      }
      #close-btn{
-         top: 12px;
-         right: 51px;
+         top:1px;
+         right: 34px;
      }
      #resize #menu li{
-         margin-left: -3px;
+         padding-top: 30px;
+         margin-top: 40px;
+         margin-left: -47px;
          font-size: 20px;
          font-weight: lighter;
      }
      #resize li span{
          font-weight: bolder;
      }
+     #resize #menu li a:hover{
+        text-decoration: none;
+        color: grey;
+    }
+   
      
  }
+
+ @media(max-width: 815px) and (orientation:landscape){
+    #toggle{
+        margin-top: 6px;
+        margin-right: -14px;
+    }
+    #close-btn{
+        top: 1px;
+        right: 35px;
+    }
+    #resize #menu li{
+        padding-top: 0;
+        margin-top: 15px;
+        margin-left: -3px;
+        font-size: 20px;
+        font-weight: lighter;
+    }
+    #resize li span{
+        font-weight: bolder;
+    }
+
+}
 
 
 #img{
@@ -143,14 +178,14 @@ nav #brand a:hover{
     
 }
 
-.card {
+.card1 {
     width: 100%;
     height: 100vh;
     display: flex;
     background: #fff;
 }
 
-.card a{
+.card1 a{
     position: absolute;
 }
 
@@ -169,7 +204,7 @@ nav #brand a:hover{
     margin-left: 1px;
 }
 
-.card-img {
+.card1-img {
     background-position: center;
     width: 80%;
     height: 100%;
@@ -178,24 +213,16 @@ nav #brand a:hover{
 }
 
 
-.card-content {
-    padding: 3% 5%;
+.card1-content {
+    padding: 8% 5%;
     box-sizing: border-box;
     width: 50%;
     background: #fff;
 }
 
-@media(max-width: 768px){
-    .card-content{
-        margin-top: 95px;
-    }
 
-    .card-img{
-        background-size: auto;
-    }
-}
 
-.card-theme {
+.card1-theme {
     font-size: 50px;
     text-transform: uppercase;
     font-family: "Quicksand" !important;
@@ -204,7 +231,7 @@ nav #brand a:hover{
 }
 
 
-.card-header {
+.card1-header {
     font-weight: lighter;
     font-size: 15px;
     line-height: 1;
@@ -213,19 +240,64 @@ nav #brand a:hover{
     font-family: "Quicksand" !important;
 }
 
-@media(max-width: 768px){
-    .card-theme{
+@media(max-width: 815px){
+    .card1-theme{
         font-size: 10px;
     }
-    .card-header{
+    .card1-header{
         font-size: 8px;
     }
-    .card-para{
-        font-size: 7px;
+    .card1-para{
+        font-size: 15px;
+    }
+
+    .card1-content{
+        margin-top: 150px;
+    }
+
+    .card1-img{
+        background-size: auto;
+    }
+
+    #i1{
+        margin-top: 476px;
+        margin-left: 8px;
+    }
+    
+    #i2{
+        margin-top: 430px;
+        margin-left: 5px;
+    }
+    
+    #i3{
+        margin-top: 390px;
+        margin-left: 1px;
     }
 }
 
-.card-para {
+@media(max-width: 815px) and (orientation:landscape){
+
+    .card1-content{
+        margin-top: -18px;
+    }
+    #i1{
+        margin-top: 326px;
+        margin-left: 8px;
+    }
+    
+    #i2{
+        margin-top: 280px;
+        margin-left: 5px;
+    }
+    
+    #i3{
+        margin-top: 240px;
+        margin-left: 1px;
+    }
+    
+}
+
+.card1-para {
     font-size: 1.8vmin;
     line-height: 1.8;
     margin-bottom: 2.5vmin;
@@ -258,23 +330,3 @@ input{
     letter-spacing: 2px;
 }
 
-button{
-  color: grey !important;
-  font-size: 20px;
-  font-weight: 500;
-  padding: 0.5em 1.2em;
-  position: relative;
-  outline: 1px solid;
-  outline-color: grey;
-  border: none;
-  transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
-
-}
-
-button:hover {
-  box-shadow: inset 0 0 20px  #5f5f5f, 0 0 20px  #bbbbbb ;
-  outline-color: rgba(49, 138, 172, 0);
-  outline-offset: 80px;
-  text-shadow: 1px 1px 6px #fff;
-   
-  }

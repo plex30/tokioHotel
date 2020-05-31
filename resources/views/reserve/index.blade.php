@@ -70,7 +70,7 @@
         <div class="input-group col-md-8 float-right" >
                   <select class="form-control col-sm-6" name="capacidad" style="display: inline-block;">
                     <option value="0"></option>
-                    <option value="1">Individual</option>
+                    <option value="1">Individual</option> 
                     <option value="2">Doble</option>
                     <option value="3">Triple</option>
                   </select>
