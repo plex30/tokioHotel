@@ -33,7 +33,7 @@
 
         </div>
         
-      </form>
+  </form>
 </nav>
 <div id="resize">
   <div id="close-btn"><img src="{{asset('./img/home/iconClose.png')}}" width="30" height="30"></div>

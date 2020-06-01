@@ -105,7 +105,7 @@ nav #menu li a:hover{
 #resize #menu{
     height: 90px;
     position: absolute;
-    left: 41%;
+    left: 41%; 
     top:-1%;
     transform: translateX(-40%);
     text-align: center;

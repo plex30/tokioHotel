@@ -171,22 +171,51 @@ nav #brand a:hover{
      
  }
 
- 
+ @media(max-width: 768px) and (orientation:landscape){
+    #toggle{
+        margin-top: 6px;
+        margin-right: 4px;
+    }
+    #close-btn{
+        top: 12px;
+        right: 35px;
+    }
+    #resize #menu li{
+        margin-left: -3px;
+        font-size: 20px;
+        font-weight: lighter;
+    }
+    #resize li span{
+        font-weight: bolder;
+    }
+    nav #brand{
+        display: none;
+    }
 
-.brand span a {
+    .form-control{
+        width: 100%;
+        text-align: center;
+        margin-left: 5px;
+    }
 
-    line-height: 60px;
-    left: 50%;
-    transform: translateX(-50%);
-    text-transform: uppercase;
-    font-size: 14px;
-    font-weight: 300;
-    letter-spacing: 4px;
+    nav{
+        height: 60px;
+    }
+
+    .form-group{
+        padding-top: 55px;
+       
+    }
+
+    #boton{
+        margin-top: -5px;
+        margin-right: 100px;
+    }
+
+
+    
 }
 
-.brand a:hover {
-    text-decoration: none;
-}
 
 #container{
 	box-shadow: 0 15px 30px 1px rgba(36, 36, 36, 0.31);
