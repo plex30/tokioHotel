@@ -36,11 +36,9 @@ Route::delete('admin/reserva/{uroom}', 'AdminController@destroyRev')->name('admi
 Route::put('admin/cliente/{user}', 'AdminController@updateCli')->name('admin.updateCli');
 Route::put('admin/room/{room}', 'AdminController@updateRoom')->name('admin.updateRoom');
 Route::put('admin/reserva/{uroom}', 'AdminController@updateRev')->name('admin.updateRev');
-/* Route::get('reserve', 'ReserveController@index')->name('reserve.index'); */
-/* Route::post('reserve/show/{id}', 'ReserveController@showReserva')->name('reserve.show'); */ 
 Route::post('reserve', 'ReserveController@reserva')->name('reserve.reserva');
-
-
+Route::post('reserve', 'ReserveController@reserva')->name('reserve.reserva');
+Route::post('/send', 'ContactController@sendEmail')->name('contact.sendEmail');
 Auth::routes();
 
 

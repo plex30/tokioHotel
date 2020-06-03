@@ -7,7 +7,6 @@ window.onload = function () {
   const link = document.getElementById('resize').querySelectorAll('a')
   link.forEach(function (e) {
     e.addEventListener('click', changeMenu)
-
     
   })
 
@@ -45,4 +44,8 @@ window.onload = function () {
   }
 
   window.addEventListener('scroll', Scroll)
+
+  $('[data-toggle=dropdown]').each(function() {
+    this.addEventListener('click', function() {}, false);
+   });
 }

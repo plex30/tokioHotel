@@ -29,9 +29,9 @@
                             @endif
                         @else
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <p class="nav-link dropdown-toggle" data-toggle="dropdown">
                                 Bienvenido/a {{ Auth::user()->firstname }} <span class="caret"></span>
-                            </a>
+                            </p>
                             
                             @if (Auth::user()->firstname == 'Admin')
                             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">

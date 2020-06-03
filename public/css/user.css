@@ -51,112 +51,140 @@ html, body {
   
   
   #toggle{
+   text-align: center;
+   position: fixed;
+   right: 30px;
+   top: -40px;
+   font-weight: 300;
+   z-index: 2;
+   width: 30px;
+   height: 30px;
+   cursor: pointer;
+   float: right;
+   transition: all 1s ease-out; 
+   margin-top: 85px;
+}
+
+#close-btn{
     position: absolute;
     right: 30px;
-    margin-top: 10px;
-    font-weight: 300;
     z-index: 2;
-    width: 30px;
-    height: 30px;
     cursor: pointer;
-    transition: all 1s ease-out; 
-    margin-top: 25px;
+    top: 20px;
+    line-height: 80px;
+}
+
+#resize{
+    z-index: 1;
+    top: 0px;
+    position: fixed;
+    background: #fff;
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 1s ease-out;
+}
+
+#resize #menu{
+    height: 90px;
+    position: absolute;
+    left: 45%;
+    transform: translateX(-40%);
+    text-align: center;
+    display: table-cell;
+    vertical-align: center;
+}
+
+#resize #menu li{
+    display: block;
+    text-align: center;
+    padding: 10px 0px;
+    margin-left: 50px;
+    font-size: 35px;
+    min-height: 50px;
+    font-weight: lighter;
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+}
+
+
+
+#resize li:nth-child(1) {
+    margin-top: 140px;
+}
+
+#resize #menu li a{
+    text-decoration: none;
+    color:#000;
+}
+
+
+
+#resize #menu li a:hover{
+    text-decoration: none;
+    color: grey;
+}
+
+#resize.active{
+    visibility: visible;
+    opacity: 1;
+}
+
+#toggle.on {
+    visibility: hidden;
+    opacity: 0;
+}
+
+@media(max-width: 815px){
+   #toggle{
+       margin-top: 6px;
+       margin-left: 4px;
+       position: absolute;
+   }
+   #close-btn{
+       top:1px;
+       right: 57px;
+   }
+   #resize #menu li{
+       padding-top: 30px;
+       margin-top: 40px;
+       margin-left: -47px;
+       font-size: 20px;
+       font-weight: lighter;
+   }
+   #resize li span{
+       font-weight: bolder;
+   }
+   #resize #menu li a:hover{
+      text-decoration: none;
+      color: grey;
   }
-  
+ 
+   
+}
+
+@media(max-width: 815px) and (orientation:landscape){
+  #toggle{
+      margin-top: 6px;
+      margin-right: 4px;
+  }
   #close-btn{
-     position: absolute;
-     right: 30px;
-     z-index: 2;
-     cursor: pointer;
-     top: 88px;
-     line-height: 80px;
+      top: 1px;
+      right: 35px;
   }
-  
-  #resize{
-     z-index: 1;
-     top: 0px;
-     position: fixed;
-     background: #fff;
-     width: 100%;
-     height: 100%;
-     visibility: hidden;
-     opacity: 0;
-     transition: all 1s ease-out;
-  }
-  
-  #resize #menu{
-     height: 90px;
-     position: absolute;
-     left: 45%;
-     transform: translateX(-40%);
-     text-align: center;
-     display: table-cell;
-     vertical-align: center;
-  }
-  
   #resize #menu li{
-     display: block;
-     text-align: center;
-     padding: 10px 0px;
-     margin-left: 50px;
-     font-size: 50px;
-     min-height: 50px;
-     font-weight: bold;
-     cursor: pointer;
-     transition: all 0.3s ease-out;
+      padding-top: 0;
+      margin-top: 15px;
+      margin-left: -3px;
+      font-size: 20px;
+      font-weight: lighter;
   }
-  
-  #resize li:nth-child(1) {
-     margin-top: 140px;
+  #resize li span{
+      font-weight: bolder;
   }
-  
-  #resize #menu li a{
-     text-decoration: none;
-     color:#000;
-  }
-  
-  #resize #menu li a:hover{
-     text-decoration: none;
-  }
-  
-  #resize.active{
-     visibility: visible;
-     opacity: 1;
-  }
-  
-  #toggle.on {
-     visibility: hidden;
-     opacity: 0;
-  }
-  
-  
-  @media(max-width: 768px){
-     #toggle{
-         margin-top: 26px;
-         margin-right: 64px;
-     }
-     #close-btn{
-         top: 22px;
-         right: 94px;
-     }
-     #resize #menu li{
-         margin-left: -50px;
-         font-size: 20px;
-         font-weight: lighter;
-     }
-     #resize li span{
-         font-weight: bolder;
-     }
-     nav #brand{
-         display: none;
-     }
-  
-     nav{
-         height: 60px;
-     }
-  
-     
-  }
+
+}
 
   #container{
       position: absolute;
@@ -189,4 +217,46 @@ html, body {
 #password{
    margin-top: 20px;
    margin-left: 185px;
+}
+
+#resp{
+   display: none;
+ }
+
+@media(max-width: 815px){
+
+   
+   #container{
+      margin-left: 30px;
+      margin-right: 30px;
+   }
+
+   .container-show1{
+      margin-left: 35px;
+      margin-right: 25px;
+      position: absolute;
+   }
+
+   #resp{
+      display: block;
+    }
+
+   
+}
+
+@media(max-width: 815px) and (orientation:landscape){
+
+   
+   #container{
+      margin-left: 30px;
+      margin-right: 30px;
+   }
+
+   .container-show1{
+      margin-left: 65px;
+      margin-right: 25px;
+      position: absolute;
+   }
+
+   
 }

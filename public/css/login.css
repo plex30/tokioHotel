@@ -50,7 +50,7 @@ nav #brand a:hover{
 
 
 
-#toggle{
+#toggle1{
   position: absolute;
   right: 30px;
   margin-top: 10px;
@@ -124,23 +124,24 @@ nav #brand a:hover{
    opacity: 1;
 }
 
-#toggle.on {
+#toggle1.on {
    visibility: hidden;
    opacity: 0;
 }
 
 
-@media(max-width: 768px){
-   #toggle{
-       margin-top: 26px;
+@media(max-width: 815px){
+   #toggle1{
+       margin-top: 16px;
        margin-right: 64px;
    }
    #close-btn{
-       top: 22px;
+       top: 16px;
        right: 94px;
    }
    #resize #menu li{
-       margin-left: -50px;
+       margin-top: 65px;
+       margin-left: -58px;
        font-size: 20px;
        font-weight: lighter;
    }
@@ -154,6 +155,35 @@ nav #brand a:hover{
    nav{
        height: 60px;
    }
+
+    
+}
+
+@media(max-width: 815px) and (orientation:landscape){
+  #toggle1{
+      margin-top: 16px;
+      margin-right: 64px;
+  }
+  #close-btn{
+      top: 16px;
+      right: 94px;
+  }
+  #resize #menu li{
+      margin-top: 10px;
+      margin-left: -35px;
+      font-size: 20px;
+      font-weight: lighter;
+  }
+  #resize li span{
+      font-weight: bolder;
+  }
+  nav #brand{
+      display: none;
+  }
+
+  nav{
+      height: 60px;
+  }
 
    
 }

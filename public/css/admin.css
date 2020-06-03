@@ -30,7 +30,15 @@ html, body {
       margin-left: 20px;
   }
 
+  #resp{
+    display: none;
+  }
+
   @media(max-width: 815px){
+
+    #resp{
+      display: block;
+    }
     .container-show{
       text-align: center;
       margin-left:40px;

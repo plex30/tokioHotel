@@ -29,7 +29,7 @@
      
           <input type="hidden" name="idRoom" value="{{$room->id}}">
           <input type="hidden" name="idUser" value="{{auth()->id()}}">  
-          <button type="submit" class="btn btn-outline-dark ml-3" id="boton" data-toggle="modal" data-target="#myModal" onclick="confirm('¿Esta seguro que desea hacer la reserva de esta habitación?')">Ver Disponibilidad</button>
+          <button type="submit" class="btn btn-outline-dark ml-3" id="boton" onclick="confirm('¿Esta seguro que desea hacer la reserva de esta habitación?')">Ver Disponibilidad</button>
 
         </div>
         
@@ -70,16 +70,8 @@
       </ul>
 </div>
 </div>
-@if ($errors->any())
-<script>
-  $( document ).ready(function() {
-  $('#myModal').modal('toggle')
+@if (isset($errors) && $errors->any())
 
-  
-});
-  
-
-</script>
 <div class="modal fade" id="myModal" role="dialog">
   <div class="modal-dialog">
   
@@ -87,7 +79,7 @@
     <div class="modal-content">
       <div class="modal-header">
           <h4 class="modal-title">¡Algo salio mal!</h4>
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      <button type="button" class="close" data-dismiss="modal">&times;</button>
         
       </div>
       <div class="modal-body">
@@ -107,7 +99,6 @@
   </div>
 </div>
 @endif
-
             <div id="container">	
 	              <div class="product-details">
                   <h1>{{$room->tipo}}</h1>
@@ -166,7 +157,12 @@
       </ul>
       <h2>Precio por noche: {{$room->pvp}}€</h2>
   </div>
-    
-    
+  <script>
+    $(document).ready(function(){
+      $('#myModal').modal('toggle');
+    })
+ 
+  </script>
+  
 
 @endsection

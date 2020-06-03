@@ -38,12 +38,12 @@ Tokio Hotel
     <tbody>
         @foreach ($user as $item)
         <tr>
-            <td>{{$item->id}}</td>
-            <td>{{$item->dni}}</td>
-            <td>{{$item->firstname}}</td>
-            <td>{{$item->lastname}}</td>
-            <td>{{$item->phone}}</td>
-            <td>{{$item->email}}</td>
+            <td><p id="resp" style="font-weight: 900">ID Cliente: </p>{{$item->id}}</td>
+            <td><p id="resp"style="font-weight: 900">DNI: </p>{{$item->dni}}</td>
+            <td><p id="resp" style="font-weight: 900">Nombre: </p>{{$item->firstname}}</td>
+            <td><p id="resp" style="font-weight: 900">Apellidos: </p>{{$item->lastname}}</td>
+            <td><p id="resp"style="font-weight: 900">Teléfono: </p>{{$item->phone}}</td>
+            <td><p id="resp" style="font-weight: 900">Email: </p>{{$item->email}}</td>
             <td><form class="form-inline text-nowrap d-inline" name="for"
                 action="{{route('admin.destroyCli', $item)}}" method="POST">
             @method('DELETE')

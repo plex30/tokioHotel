@@ -297,6 +297,10 @@ nav #brand a:hover{
     
 }
 
+#myModal{
+    top:160px;
+}
+
 .card1-para {
     font-size: 1.8vmin;
     line-height: 1.8;
@@ -307,6 +311,7 @@ nav #brand a:hover{
 
 
 input{
+    font-size: 15px;
     width: 100%;
     margin: 20px 0;
     background: rgba(0,0,0,0);
@@ -330,3 +335,10 @@ input{
     letter-spacing: 2px;
 }
 
+.invalid-feedback{
+    position: absolute;
+    color: red;
+    width: 300px;
+    margin-top: -145px;
+    font-size: 13px;
+  }

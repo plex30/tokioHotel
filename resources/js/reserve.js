@@ -9,12 +9,13 @@ window.onload = function () {
     })
   
     function changeMenu () {
-      this.classList.toggle('on');
-      document.getElementById('resize').classList.toggle('active')
+      document.getElementById('toggle').classList.toggle('on');
+      document.getElementById('resize').classList.toggle('active');
     }
 
     irArriba();
    
+    
 
 }
 

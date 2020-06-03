@@ -39,13 +39,13 @@ Tokio Hotel
     <tbody>
         @foreach ($room as $item)
         <tr>
-            <td>{{$item->id}}</td>
+            <td><p id="resp" style="font-weight: 900">ID: </p>{{$item->id}}</td>
             <td><img src="{{asset($item->imagen)}}" width="80" height="80"></td>
-            <td>{{$item->tipo}}</td>
-            <td>{{$item->capacidad}}</td>
-            <td>{{$item->n_habitacion}}</td>
-            <td>{{$item->tamano}}</td>
-            <td>{{$item->pvp}}</td>
+            <td><p id="resp" style="font-weight: 900">Tipo: </p>{{$item->tipo}}</td>
+            <td><p id="resp" style="font-weight: 900">Capacidad: </p>{{$item->capacidad}}</td>
+            <td><p id="resp" style="font-weight: 900">Nº Habitación: </p>{{$item->n_habitacion}}</td>
+            <td><p id="resp" style="font-weight: 900">Tamaño: </p>{{$item->tamano}}</td>
+            <td><p id="resp" style="font-weight: 900">Precio: </p>{{$item->pvp}}</td>
             <td><form class="form-inline text-nowrap d-inline" name="for"
               action="{{route('admin.destroyRoom', $item)}}" method="POST">
             @method('DELETE')

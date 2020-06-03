@@ -47,16 +47,18 @@ nav #brand a:hover{
 
 
 #toggle{
-  position: absolute;
-  right: 30px;
-  margin-top: 10px;
-  font-weight: 300;
-  z-index: 2;
-  width: 30px;
-  height: 30px;
-  cursor: pointer;
-  transition: all 1s ease-out; 
-  margin-top: 25px;
+    text-align: center;
+    position: fixed;
+    right: 30px;
+    top: -50px;
+    font-weight: 300;
+    z-index: 2;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    float: right;
+    transition: all 1s ease-out; 
+    margin-top: 85px;
  }
 
  #close-btn{
@@ -64,7 +66,7 @@ nav #brand a:hover{
      right: 30px;
      z-index: 2;
      cursor: pointer;
-     top: 88px;
+     top: 10px;
      line-height: 80px;
  }
  
@@ -95,12 +97,14 @@ nav #brand a:hover{
      text-align: center;
      padding: 10px 0px;
      margin-left: 50px;
-     font-size: 50px;
+     font-size: 35px;
      min-height: 50px;
-     font-weight: bold;
+     font-weight: lighter;
      cursor: pointer;
      transition: all 0.3s ease-out;
  }
+
+ 
  
  #resize li:nth-child(1) {
      margin-top: 140px;
@@ -110,9 +114,12 @@ nav #brand a:hover{
      text-decoration: none;
      color:#000;
  }
+
+
  
  #resize #menu li a:hover{
      text-decoration: none;
+     color: grey;
  }
  
  #resize.active{
@@ -125,98 +132,91 @@ nav #brand a:hover{
      opacity: 0;
  }
 
- 
- @media(max-width: 768px){
-     #toggle{
-         margin-top: 6px;
-         margin-right: 4px;
-     }
-     #close-btn{
-         top: 12px;
-         right: 35px;
-     }
-     #resize #menu li{
-         margin-left: -3px;
-         font-size: 20px;
-         font-weight: lighter;
-     }
-     #resize li span{
-         font-weight: bolder;
-     }
-     nav #brand{
-         display: none;
-     }
+ #myModal{
+    top:160px;
+}
 
-     .form-control{
-         width: 45%;
-         text-align: center;
-         margin-left: 95px;
-     }
-
-     nav{
-         height: 60px;
-     }
-
-     .form-group{
-         padding-top: 55px;
-         margin-right: -35px;
-     }
-
-     #boton{
-         margin-top: 25px;
-         margin-right: 38px;
-     }
-
-
-     
- }
-
- @media(max-width: 768px) and (orientation:landscape){
+  @media(max-width: 815px){
     #toggle{
-        margin-top: 6px;
+        margin-top: 26px;
         margin-right: 4px;
+        position: absolute;
     }
     #close-btn{
-        top: 12px;
-        right: 35px;
+        top:11px;
+        right: 75px;
     }
     #resize #menu li{
-        margin-left: -3px;
+        padding-top: 30px;
+        margin-top: 40px;
+        margin-left: -68px;
         font-size: 20px;
         font-weight: lighter;
     }
     #resize li span{
         font-weight: bolder;
     }
-    nav #brand{
-        display: none;
-    }
+    #resize #menu li a:hover{
+       text-decoration: none;
+       color: grey;
+   }
 
-    .form-control{
-        width: 100%;
-        text-align: center;
-        margin-left: 5px;
+   .form-control{
+    width: 45%;
+    text-align: center;
+    margin-left: 95px;
     }
 
     nav{
-        height: 60px;
+    height: 60px;
     }
 
     .form-group{
-        padding-top: 55px;
-       
+    padding-top: 55px;
+    margin-right: -35px;
     }
 
     #boton{
-        margin-top: -5px;
-        margin-right: 100px;
+    margin-top: 25px;
+    margin-right: 38px;
     }
-
-
+  
     
 }
 
+@media(max-width: 815px) and (orientation:landscape){
+   #toggle{
+       margin-top: 6px;
+       margin-right: 4px;
+   }
+   #close-btn{
+       top: 1px;
+       right: 35px;
+   }
+   #resize #menu li{
+       padding-top: 0;
+       margin-top: 15px;
+       margin-left: -3px;
+       font-size: 20px;
+       font-weight: lighter;
+   }
+   #resize li span{
+       font-weight: bolder;
+   }
 
+   .form-group{
+    margin-top: -100px;
+    width: 120%;
+}
+.form-control{
+    margin-top: -100px;
+    width: 160%;
+    text-align: center;
+   
+}
+
+}
+ 
 #container{
 	box-shadow: 0 15px 30px 1px rgba(36, 36, 36, 0.31);
 	background: rgba(255, 255, 255, 0.90);
@@ -264,6 +264,38 @@ nav #brand a:hover{
         visibility: visible;
         position: absolute;
         margin-top: 210px;
+        
+       
+    }
+
+    
+}
+
+@media(max-width:768px)  and (orientation:landscape){
+
+    #container{
+        display: none;
+    }
+    #container-no{
+        padding-top: 400px;
+        display: block;
+        font-size: 10px;
+        margin-left: 30px;
+        margin-top: 20px;
+    }
+
+    #container-no h1{
+        font-size: 25px;
+    }
+
+    #container-no h2{
+        font-size: 20px;
+    }
+    
+    .product-image1{
+        visibility: visible;
+        position: absolute;
+        margin-top: 110px;
         
        
     }

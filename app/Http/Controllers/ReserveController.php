@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Room;
 use App\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\MessageBag;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Requests\ReservaRequest;
 use Illuminate\Support\Facades\Redirect;
@@ -19,7 +20,7 @@ class ReserveController extends Controller
     }
 
     public function reserva(ReservaRequest $request){
-        
+        $errors = new MessageBag;
         $datos=$request->validated();
         $user = User::find($request->get('idUser'));
         $user->room()->attach($request->get('idRoom'),['f_entrada'=>$datos['f_entrada'],'f_salida'=>$datos['f_salida']]);
@@ -34,7 +35,8 @@ class ReserveController extends Controller
         }
         $id = $request->input('id');
         $room = Room::find($id);
-        return view('reserve.detalle',compact('room') );
+        
+        return view('reserve.detalle',compact('room'));
     }
 
 

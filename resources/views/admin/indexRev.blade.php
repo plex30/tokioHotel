@@ -37,11 +37,11 @@ Tokio Hotel
     <tbody>
         @foreach ($uroom as $item)
         <tr>
-            <td>{{$item->id}}</td>
-            <td>{{$item->user_id}}</td>
-            <td>{{$item->room_id}}</td>
-            <td>{{\Carbon\Carbon::parse($item->f_entrada)->format('d/m/Y')}}</td>
-            <td>{{\Carbon\Carbon::parse($item->f_salida)->format('d/m/Y')}}</td>
+            <td><p id="resp" style="font-weight: 900">Código de Reserva: </p>{{$item->id}}</td>
+            <td><p id="resp" style="font-weight: 900">Código de Cliente: </p>{{$item->user_id}}</td>
+            <td><p id="resp" style="font-weight: 900">Código de Habitación: </p>{{$item->room_id}}</td>
+            <td><p id="resp" style="font-weight: 900">Fecha Entrada: </p>{{\Carbon\Carbon::parse($item->f_entrada)->format('d/m/Y')}}</td>
+            <td><p id="resp" style="font-weight: 900">Fecha Salida: </p>{{\Carbon\Carbon::parse($item->f_salida)->format('d/m/Y')}}</td>
             <td><form class="form-inline text-nowrap d-inline" name="for"
               action="{{route('admin.destroyRev', $item)}}" method="POST">
             @method('DELETE')

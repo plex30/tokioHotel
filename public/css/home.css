@@ -113,6 +113,7 @@ nav #menu li a:hover{
     visibility: hidden;
     opacity: 0;
     transition: all 1s ease-out;
+    overflow: hidden;
 }
 
 #resize #menu{
@@ -123,6 +124,7 @@ nav #menu li a:hover{
     text-align: center;
     display: table-cell;
     vertical-align: center;
+   
 }
 
 #resize #menu li{
@@ -134,6 +136,7 @@ nav #menu li a:hover{
     font-weight: bold;
     cursor: pointer;
     transition: all 0.3s ease-out;
+
 }
 
 #resize li:nth-child(1) {
@@ -145,6 +148,8 @@ nav #menu li a:hover{
    
 }
 
+
+
 #resize #menu li a:hover{
     text-decoration: none;
 }
@@ -152,6 +157,8 @@ nav #menu li a:hover{
 #resize.active{
     visibility: visible;
     opacity: 1;
+    overflow: hidden;
+    
 }
 
 @media(max-width: 815px){
@@ -182,6 +189,14 @@ nav #menu li a:hover{
         position: absolute;
         opacity: 1;
     }
+
+    #resize #menu li p{
+       color:#000;
+       font-size: 20px;
+       font-weight: lighter;
+       margin-top: 18px;
+       margin-left: 5px;
+    }
 }
 
 @media(max-width: 815px) and (orientation:landscape){
@@ -192,6 +207,12 @@ nav #menu li a:hover{
     #resize #menu li{
         margin-top: -5px;
         
+    }
+
+    #resize #menu li p{
+        color:#000;
+       font-size: 20px;
+       font-weight: lighter;
     }
 }
 
