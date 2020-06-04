@@ -72,7 +72,7 @@ Tokio Hotel
                 </span>
                 <div class="form-group row">
                     <div class="wrap-input col-md-6">
-                        <input class="input" type="email" placeholder="E-mail" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
+                        <input class="input" type="email" placeholder="E-mail" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
                         
                     </div>
                 </div>

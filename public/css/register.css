@@ -1,0 +1,423 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: "Quicksand" !important;
+    font-weight: lighter;
+  }
+  
+  nav {
+    position: fixed;
+    margin-top: 10px;
+    width: 100%;
+    height: 100px;
+    background-color: transparent;
+    display: inline-block;
+    
+  }
+  
+  nav.scrolled {
+    background-color: #fff !important;
+    transition: background-color 300ms linear;
+  }
+  
+  .menu-open {
+    line-height: 60px;
+    left: 1.4em;
+  }
+  
+  
+  nav #brand{
+    float: left;
+    display: block;
+    margin-top: 8px;
+    margin-left: 15px;
+    line-height: 80px;
+    font-weight: bold;
+    position: absolute;
+  }
+  
+  nav #brand a{
+    color: #000;
+    transition: all 0.3s ease-out;
+  }
+  
+  
+  nav #brand a:hover{
+    text-decoration: none;
+  }
+  
+  
+  
+  #toggle1{
+    position: absolute;
+    right: 30px;
+    margin-top: 10px;
+    font-weight: 300;
+    z-index: 2;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    transition: all 1s ease-out; 
+    margin-top: 25px;
+  }
+  
+  #close-btn{
+     position: absolute;
+     right: 30px;
+     z-index: 2;
+     cursor: pointer;
+     top: 10px;
+     line-height: 80px;
+  }
+  
+  #resize{
+    z-index: 1;
+    top: 0px;
+    position: fixed;
+    background: #fff;
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 1s ease-out;
+  }
+  
+  #resize #menu{
+    height: 90px;
+    position: absolute;
+    left: 45%;
+    transform: translateX(-40%);
+    text-align: center;
+    display: table-cell;
+    vertical-align: center;
+  }
+  
+  #resize #menu li{
+    display: block;
+    text-align: center;
+    padding: 10px 0px;
+    margin-left: 50px;
+    font-size: 35px;
+    min-height: 50px;
+    font-weight: lighter;
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+  }
+  
+  
+  
+  #resize li:nth-child(1) {
+    margin-top: 140px;
+  }
+  
+  #resize #menu li a{
+    text-decoration: none;
+    color:#000;
+  }
+  
+  
+  
+  #resize #menu li a:hover{
+    text-decoration: none;
+    color: grey;
+  }
+  
+  #resize.active{
+    visibility: visible;
+    opacity: 1;
+  }
+  
+  #toggle.on {
+    visibility: hidden;
+    opacity: 0;
+  }
+  
+  
+  
+  @media(max-width: 815px){
+    #toggle{
+        margin-top: 26px;
+        margin-right: 4px;
+        position: absolute;
+    }
+    #close-btn{
+        top:11px;
+        right: 29px;
+    }
+    #resize #menu li{
+        padding-top: 30px;
+        margin-top: 50px;
+        margin-left: -34px;
+        font-size: 20px;
+        font-weight: lighter;
+    }
+    #resize li span{
+        font-weight: bolder;
+    }
+    #resize #menu li a:hover{
+       text-decoration: none;
+       color: grey;
+   }
+  
+    nav{
+    height: 60px;
+    }
+    
+  }
+  
+  @media(max-width: 815px) and (orientation:landscape){
+   #toggle{
+       margin-top: 6px;
+       margin-right: 4px;
+   }
+   #close-btn{
+       top: 1px;
+       right: 35px;
+   }
+   #resize #menu li{
+       padding-top: 0;
+       margin-top: 15px;
+       margin-left: -3px;
+       font-size: 20px;
+       font-weight: lighter;
+   }
+   #resize li span{
+       font-weight: bolder;
+   }
+  
+  }
+    
+    input {
+        border: none;
+    }
+    
+    button {
+        outline: none !important;
+        border: none;
+        background: transparent;
+    }
+    
+    button:hover {
+        cursor: pointer;
+    }
+    
+    iframe {
+        border: none !important;
+    }
+    
+    .limiter {
+      width: 100%;
+      margin: 0 auto;
+    }
+    
+    .container-login {
+      width: 100%;  
+      min-height: 100vh;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      padding: 15px;
+      background: #f2f2f2;  
+    }
+    
+    .wrap-login {
+      width: 250px;
+      height: 490px;
+      background: #fff;
+      border-radius: 10px;
+      overflow: hidden;
+      padding: 35px 55px 33px 55px;
+    
+      box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.1);
+      -moz-box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.1);
+      -webkit-box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.1);
+      -o-box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.1);
+      -ms-box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.1);
+    }
+  
+    .wrap-login1 {
+      width: 250px;
+      height: 790px;
+      background: #fff;
+      border-radius: 10px;
+      overflow: hidden;
+      padding: 35px 55px 33px 55px;
+    
+      box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.1);
+      -moz-box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.1);
+      -webkit-box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.1);
+      -o-box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.1);
+      -ms-box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.1);
+    }
+    
+    .login-form {
+      width: 100%;
+    }
+    
+    .title {
+      display: block;
+      font-size: 30px;
+      color: grey;
+      line-height: 1.2;
+      text-align: center;
+      
+    }
+  
+    .title p{
+      font-family: "Quicksand";
+      font-size: 13px;
+      color:  #000;
+      margin-top: 5px;
+      margin-bottom: 20px;
+    }
+  
+    .form-group {
+      margin-bottom: 1rem;
+    }
+  
+    .form-group {
+      display: flex;
+      flex: 0 0 auto;
+      flex-flow: row wrap;
+      align-items: center;
+      margin-bottom: 0;
+    }
+    
+    .wrap-input {
+      width: 100%;
+      position: relative;
+      border-bottom: 2px solid #adadad;
+      margin-bottom: 37px;
+    }
+    
+    .input{
+      font-family: "Quicksand";
+      font-size: 15px;
+      color: #555555;
+      line-height: 1.2;
+    
+      display: block;
+      width: 100%;
+      height: 45px;
+      background: transparent;
+      padding: 0 5px;
+    }
+    
+    
+    .container-login-form-btn {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -moz-box;
+      display: -ms-flexbox;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding-top: 13px;
+    }
+    
+    .wrap-login-form-btn {
+      width: 100%;
+      display: block;
+      position: relative;
+      z-index: 0;
+      overflow: hidden;
+      margin: 0 auto;
+      margin-top: 10px;
+      margin-bottom: 20px;
+    }
+    
+    .login-form-bgbtn {
+      position: absolute;
+      z-index: -1;
+      width: 300%;
+      height: 100%;
+      background: grey;
+      background: -webkit-linear-gradient(right,   #b8b8b8 ,   #000000 ,   #b8b8b8  ,   #000000 );
+      background: -o-linear-gradient(right,   #b8b8b8 ,   #000000 ,   #b8b8b8   ,   #000000 );
+      background: -moz-linear-gradient(right,   #b8b8b8   ,   #000000 ,   #b8b8b8   ,   #000000 );
+      background: linear-gradient(right,   #b8b8b8   ,   #000000 ,   #b8b8b8   ,   #000000 );
+      top: 0;
+      left: -100%;
+      
+      -webkit-transition: all 0.4s;
+      -o-transition: all 0.4s;
+      -moz-transition: all 0.4s;
+      transition: all 0.4s;
+    }
+    
+    .login-form-btn {
+      font-family: "Quicksand";
+      font-size: 15px;
+      color: #fff;
+      line-height: 1.2;
+      text-transform: uppercase;
+      font-weight: 400;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0 20px;
+      width: 100%;
+      height: 50px;
+    }
+    
+    .wrap-login-form-btn:hover .login-form-bgbtn {
+      left: 0;
+    }
+  
+    .remember{
+      font-size: 14px;
+    }
+    
+    .txt1{
+      font-size: 12px;
+    }
+  
+    .txt2{
+      color: #2e7dd2;
+      font-size: 14px;
+      text-decoration: none;
+    }
+  
+    .txt2:hover{
+      color: grey;
+      border-bottom: 1px solid grey;
+    }
+    
+    @media (max-width: 576px) {
+      .wrap-login {
+        padding: 77px 15px 33px 15px;
+        margin-right:30px;
+        overflow-x: hidden;
+      }
+  
+      .wrap-login1 {
+        padding: 57px 15px 33px 15px;
+        margin-right:30px;
+      }
+      
+    }
+    .invalid-feedback{
+      position: absolute;
+      color: red;
+      width: 300px;
+      margin-top: 95px;
+      font-size: 12px;
+    }
+    
+    #card1{
+      margin-top: 200px;
+    }
+  
+    #card2{
+      margin-top: 150px;
+    }

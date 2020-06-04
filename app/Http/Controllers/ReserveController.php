@@ -31,7 +31,7 @@ class ReserveController extends Controller
 
     public function show(Request $request, Room $room){
         if (!Auth::check()) {
-            return Redirect::to("/login");
+            return Redirect::to("/login")->with('mensaje', 'Para poder hacer reservas primero tiene que iniciar sesión.');
         }
         $id = $request->input('id');
         $room = Room::find($id);

@@ -173,15 +173,7 @@
                      <div class="add-prod wow fadeInUp" data-wow-delay="1.1s">
                         <form action="{{route('reserve.show', $item)}}">
                             <input type="hidden" name="id" value="{{$item->id}}">
-                            @if(Auth::check())
-                            <button type="submit" class="btn btn-dark" onclick="comprobarLog">Reservar</button>
-                            @else
-                            <script>
-                                alert('Para poder reservar tiene que iniciar sesión, si no tiene cuenta puede crearse una en 2 minutos.');
-                            </script>
-                            @break
-                            @endif
-                            
+                            <button type="submit" class="btn btn-dark">Reservar</button>   
                         </form>
                     </div>
                </div>
