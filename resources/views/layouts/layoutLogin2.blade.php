@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="{{asset('css/login.css')}}">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet"> 
-    <script src="{{asset('../resources/js/experience.js')}}"></script>
+    <script src="{{ asset('js/experience.js') }}"></script>
 </head>
 <body>
     @yield('content')

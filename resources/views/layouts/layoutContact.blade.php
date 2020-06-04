@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="{{asset('css/contact.css')}}">
     <link rel="stylesheet" href={{asset("css/animate.css")}}>
-    <script src="{{asset('../resources/js/contact.js')}}"></script>
+    <script src="{{ asset('js/contact.js') }}"></script>
 </head>
 <body>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
