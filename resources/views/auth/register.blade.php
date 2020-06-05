@@ -1,4 +1,4 @@
-@extends('layouts.layoutLogin')
+@extends('layouts.layoutRegister')
 
 @section('title')
 Tokio Hotel

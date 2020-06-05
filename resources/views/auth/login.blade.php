@@ -48,19 +48,29 @@ Tokio Hotel
             @endguest
         </ul>
 </div>
+    @if(Session::get('mensaje'))
+    <script>
+        $( document ).ready(function() {
+        $('#myModal').modal('toggle')
+        
+    });
+    </script>
+    
+    @endif
+
     <div class="limiter">
-        <div class="container-login">
+        <div class="cont-login">
             <div class="wrap-login">
             <form class="login-form" action="{{route('login')}}" method="POST">
                 @csrf
-                <div class="invalid-feedback">
+                <div class="invalid-feedback1">
                     @error('email')
-                            <span class="invalid-feedback" role="alert">
+                            <span class="invalid-feedback1" role="alert">
                                 <p>{{ $message }}</p>
                             </span>
                     @enderror
                     @error('password')
-                            <span class="invalid-feedback" role="alert">
+                            <span class="invalid-feedback1" role="alert">
                                 <p>{{ $message }}</p>
                             </span>
                     @enderror
@@ -70,16 +80,16 @@ Tokio Hotel
                  <h2>Bienvenido</h2>
                  <p>Puede iniciar sesión con su cuenta para acceder a nuestros servicios</p>
                 </span>
-                <div class="form-group row">
-                    <div class="wrap-input col-md-6">
+                <div class="form-g1">
+                    <div class="wrap-input">
                         <input class="input" type="email" placeholder="E-mail" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
                         
                     </div>
                 </div>
 
-                <div class="form-group row">
+                <div class="form-g1">
 
-                    <div class="wrap-input col-md-6">
+                    <div class="wrap-input">
                         <input class="input" type="password" placeholder="Contraseña" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
 
                         
@@ -95,16 +105,16 @@ Tokio Hotel
                     </div>
                 </div>
 
-                <div class="text-center p-t-115">
+                <div>
                     <span class="txt1">
                     No está registrado?
                     </span>
                 <a class="txt2" href="{{route('register')}}">Registrese Aquí.</a>
                 </div>
-                <div class="form-group row">
-                    <div class="col-md-6 offset-md-4">
+                <div class="form-g1 row">
+                    <div>
                         @if (Route::has('password.request'))
-                                    <a class="txt2 btn btn-link" href="{{ route('password.request') }}">
+                                    <a class="txt2" href="{{ route('password.request') }}">
                                         {{ __('Forgot Your Password?') }}
                                     </a>
                         @endif
@@ -115,7 +125,27 @@ Tokio Hotel
         </div>
     </div>
 
-
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog">
+        
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Iniciar Sesión</h4>
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              
+            </div>
+            <div class="modal-body">
+              <p>{{Session::get('mensaje')}}</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Tokio Hotel</button>
+            </div>
+          </div>
+          
+        </div>
+      </div>
 
 
 

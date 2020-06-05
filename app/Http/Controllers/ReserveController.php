@@ -20,7 +20,7 @@ class ReserveController extends Controller
     }
 
     public function reserva(ReservaRequest $request){
-        $errors = new MessageBag;
+
         $datos=$request->validated();
         $user = User::find($request->get('idUser'));
         $user->room()->attach($request->get('idRoom'),['f_entrada'=>$datos['f_entrada'],'f_salida'=>$datos['f_salida']]);

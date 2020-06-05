@@ -1,4 +1,4 @@
-@extends('layouts.layoutLogin2')
+@extends('layouts.layoutRestore')
 
 @section('title')
 Tokio Hotel
@@ -79,7 +79,7 @@ Tokio Hotel
 
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn btn-dark">
+                                <button type="submit" class="btn btn-dark mt-4">
                                     Restablecer Contraseña
                                 </button>
                             </div>
