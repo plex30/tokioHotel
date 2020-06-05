@@ -33,6 +33,7 @@ html, body {
   #resp{
     display: none;
   }
+  
 
   @media(max-width: 815px){
 
