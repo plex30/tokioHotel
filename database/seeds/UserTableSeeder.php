@@ -36,6 +36,16 @@ class UserTableSeeder extends Seeder
         $user->roles()->attach($role_user);
 
         $user = new User();
+        $user->dni = '75240664M';
+        $user->firstname = 'Juan';
+        $user->lastname = 'Perez Nuñez';
+        $user->phone= '789765654';
+        $user->email = 'elplan_be@hotmail.com';
+        $user->password = bcrypt('pass');
+        $user->save();
+        $user->roles()->attach($role_user);
+
+        $user = new User();
         $user->dni = '89779765B';
         $user->firstname = 'Enrique';
         $user->lastname = 'Lopez Lopez';
