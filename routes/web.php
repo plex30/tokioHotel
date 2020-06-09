@@ -14,9 +14,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-/* Route::get('/', function () {
-    return view('home');
-}); */
 
 Route::get('/', 'HomeController@index')->name('home');
 
@@ -39,6 +36,7 @@ Route::put('admin/reserva/{uroom}', 'AdminController@updateRev')->name('admin.up
 Route::post('reserve', 'ReserveController@reserva')->name('reserve.reserva');
 Route::post('reserve', 'ReserveController@reserva')->name('reserve.reserva');
 Route::post('/send', 'ContactController@sendEmail')->name('contact.sendEmail');
+
 Auth::routes();
 
 

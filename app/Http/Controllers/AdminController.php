@@ -8,7 +8,7 @@ use App\UserRoom;
 use Illuminate\Http\Request;
 use App\Http\Requests\ReservaRequest;
 use Illuminate\Support\Facades\Storage;
-use App\Http\Requests\ActReservaRequest;
+
 
 class AdminController extends Controller
 {
@@ -43,11 +43,6 @@ class AdminController extends Controller
 
 
     public function destroyRoom(Room $room){
-        /* $foto = $room->imagen;
-        if (basename($foto)!='default.jpg') {
-
-            unlink(($foto));
-        } */
         $room->delete();
         return redirect()->route('admin.indexRoom')->with('message', 'Habitación Borrada');
 

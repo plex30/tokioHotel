@@ -49,7 +49,7 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-    public function authorizeRoles($roles)
+   /*  public function authorizeRoles($roles)
     {
         abort_unless($this->hasAnyRole($roles), 401);
         return true;
@@ -75,7 +75,7 @@ class User extends Authenticatable
             return true;
         }
         return false;
-    }
+    } */
 
     
     public function sendPasswordResetNotification($token)

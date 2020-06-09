@@ -44,11 +44,21 @@ html, body {
       text-align: center;
       margin-left:40px;
     }
+    #container{
+      margin-right: 30px;
+      margin-left: 30px;
+    }
+
+    #container1{
+      margin-right: 5px;
+      margin-left: 5px;
+    }
+
   }
 
   @media(max-width: 815px) and (orientation:landscape){
     .container-show{
       text-align: center;
-      margin-left:70px;
+      margin-left:70px; 
     }
   }

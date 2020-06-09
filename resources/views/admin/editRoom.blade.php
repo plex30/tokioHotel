@@ -13,7 +13,7 @@ Tokio Hotel
           <a class="nav-item nav-link" href="{{route('admin.indexCli')}}">Clientes</a>
           <a class="nav-item nav-link active" href="{{route('admin.indexRoom')}}">Habitaciones <span class="sr-only">(current)</span></a>
           <a class="nav-item nav-link" href="{{route('admin.indexRev')}}">Reservas</a>
-          <a class="nav-item nav-link" href="#">Ajustes</a>
+          <a class="nav-item nav-link" href="{{route('home')}}">Salir</a>
         </div>
       </div>
     </nav>

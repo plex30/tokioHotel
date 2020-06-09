@@ -36,7 +36,7 @@ class RoomTableSeeder extends Seeder
         ]);
 
         Room::create([
-            'tipo'=>'Individual Executive',
+            'tipo'=>'Individual Execut',
             'capacidad'=>'1',
             'n_habitacion'=>'3',
             'tamano'=>'30m²',
@@ -45,7 +45,7 @@ class RoomTableSeeder extends Seeder
         ]);
 
         Room::create([
-            'tipo'=>'Individual Executive',
+            'tipo'=>'Individual Execut',
             'capacidad'=>'1',
             'n_habitacion'=>'4',
             'tamano'=>'30m²',

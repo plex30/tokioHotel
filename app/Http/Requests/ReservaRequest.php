@@ -86,9 +86,6 @@ class ReservaRequest extends FormRequest
             'num0'=>['nullable', 'not_in:0'],
             'num1'=>['nullable', 'not_in:0'],
             'num2'=>['nullable', 'not_in:0']
-            /* 'idRoom'=>['required'],
-            'idUser'=>['required'] */
-
         ];
     }
 
@@ -98,7 +95,7 @@ class ReservaRequest extends FormRequest
             'f_salida.required'=>'La fecha de salida es obligatoria.',
             'num0.not_in'=>'La fecha de entrada no puede ser inferior a la fecha actual',
             'num1.not_in'=>'La fecha de salida debe ser mayor o igual a la de entrada',
-            'num2.not_in'=>'Esta habitación no esta disponible en las fechas seleccionadas, porfavor pruebe con otras fechas'
+            'num2.not_in'=>'Esta habitación no esta disponible en las fechas seleccionadas, por favor pruebe con otras fechas.'
         ];
     }
 }
