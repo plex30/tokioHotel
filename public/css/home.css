@@ -149,7 +149,6 @@ nav #menu li a:hover{
 }
 
 
-
 #resize #menu li a:hover{
     text-decoration: none;
 }
@@ -202,7 +201,7 @@ nav #menu li a:hover{
 @media(max-width: 815px) and (orientation:landscape){
     
     #resize #menu{
-        left: 44%;
+        left: 40%;
     }
     #resize #menu li{
         margin-top: -5px;
@@ -225,6 +224,11 @@ nav #menu li a:hover{
     #resize {
         visibility: hidden !important;
     }
+    .nav-link{
+        margin-top: 0px;
+        margin-left: 0px;
+    }
+    
 }
 
 .contain{
@@ -260,7 +264,9 @@ nav #menu li a:hover{
 
 }
 
-
+.modal{
+    top:160px;
+}
 
 h6{
     text-align: center;
@@ -297,18 +303,6 @@ h6{
     background-size: cover;
     
 }
-
-/* @media(max-width: 815px){
-    .carousel-item{
-        width: 330px;
-        height: 200px;
-}
-
-    #carouselIndicators{
-        width: 330px;
-        height: 120px;
-}
-} */
 
 
 .photo{
@@ -404,16 +398,21 @@ h6{
 
 .collab{
     text-align: right;
+    margin-right: 20px;
 }
 
 .collab p{
     font-weight: lighter;
-    margin-bottom: 20px;
+    margin-bottom: 5px;
 }
 
 .hr{
     background: #000;
     height: 1px;
+}
+
+.info{
+    height: 50px;
 }
 
 .info h4{

@@ -132,6 +132,11 @@ nav #brand a:hover{
          top:1px;
          right: 57px;
      }
+
+     #resize #menu{
+        top: 10%;
+    }
+
      #resize #menu li{
          padding-top: 30px;
          margin-top: 40px;

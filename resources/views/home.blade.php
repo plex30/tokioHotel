@@ -253,7 +253,7 @@
 
                         <div class="col-lg-4" id="personal">
                             <p class="wow fadeInUp">Encuentranos</p>
-                            <h4 class="wow fadeInUp" data-wow-delay="0.2s">TOKIO Hotel</h4>
+                            <h4 class="wow fadeInUp" data-wow-delay="0.2s">Tokio Hotel</h4>
                             <h4 class="wow fadeInUp" data-wow-delay="0.2s">C/ Real 404</h4>
                             <h4 class="wow fadeInUp" data-wow-delay="0.2s">Madrid</h4>
                             <br><br>

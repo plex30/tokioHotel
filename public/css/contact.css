@@ -132,6 +132,9 @@ nav #brand a:hover{
          top:1px;
          right: 34px;
      }
+     #resize #menu{
+        top: 10%;
+    }
      #resize #menu li{
          padding-top: 30px;
          margin-top: 40px;
@@ -158,6 +161,10 @@ nav #brand a:hover{
     #close-btn{
         top: 1px;
         right: 35px;
+    }
+
+    #resize #menu{
+        top: 10%;
     }
     #resize #menu li{
         padding-top: 0;

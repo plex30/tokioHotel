@@ -84,7 +84,7 @@ Tokio Hotel
     </thead>
     <tbody>
         @foreach ($user->room as $item)
-        <tr style="text-align: center">
+        <tr class="text-center">
             <td><p id="resp" style="font-weight: 900">Código de reserva: </p>{{$item->id}}</td>
             <td><p id="resp" style="font-weight: 900">Habitación: </p>{{$item->tipo}}</td>
             <td><p id="resp" style="font-weight: 900">Fecha de entrada:</p> {{$item->pivot->f_entrada}}</td>

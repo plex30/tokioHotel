@@ -23,9 +23,9 @@
                               @endif
                           @else
                           <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                            <p class="nav-link dropdown-toggle"  data-toggle="dropdown">
                                 Bienvenido {{ Auth::user()->firstname }} <span class="caret"></span>
-                            </a>
+                            </p>
                             
                             @if (Auth::user()->firstname == 'Admin')
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -103,9 +103,9 @@
                               @endif
                           @else
                           <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                            <p class="nav-link dropdown-toggle" data-toggle="dropdown">
                                 Bienvenido {{ Auth::user()->firstname }} <span class="caret"></span>
-                            </a>
+                            </p>
                             
                             @if (Auth::user()->firstname == 'Admin')
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">

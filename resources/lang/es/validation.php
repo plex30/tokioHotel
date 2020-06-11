@@ -131,6 +131,7 @@ return [
             'min' => 'La :attribute debe contener más de :min caracteres',
         ],
         'email'    => [
+            'email' => 'El :attribute no tiene un formato válido.',
             'unique' => 'El :attribute ya ha sido registrado.',
         ],
     ],

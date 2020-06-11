@@ -18,7 +18,7 @@ Tokio Hotel
         <ul id="menu">
             <li><a href="{{url('/')}}">Inicio</a></li>
             <li><a href="{{route('experience.index')}}">Experiencias</a></li>
-            <li><a href="">Reservas</a></li>
+            <li><a href="{{route('reserve.index')}}">Reservas</a></li>
             <li><a href="{{route('contact.index')}}">Contacto</a></li>
             @guest
                             
